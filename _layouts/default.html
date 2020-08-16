@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body data-spy="scroll" data-target="#toc">
+
+{% include nav.html %}
+
+<div class="container-fluid no-gutters">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div id="download" class="py-5 text-center">
+        <img alt="arcologies" src="./assets/images/arcologies.svg" width="600"/></a>
+        <p class="tagline mb-3">{{ site.description }}</p>
+        <a href="#" class="btn btn-lg btn-success">Download</a>
+      </div>
+    </div>
+  </div>
+  <div class="row flex-xl-nowrap">
+
+    <div class="col-md-9 offset-md-1 col-xl-8 offset-xl-2 py-md-3 pl-md-5 bd-content">
+
+      {{ content }}
+
+    </div>
+
+    {% include sidebar.html %}
+
+  </div>
+
+</div>
+
+{% include footer.html %}
+
+{% include javascript.html %}
+
+</body>
+
+</html>
