@@ -68,7 +68,7 @@ img {
     text-decoration: none; }
 
 .jumbotron {
-  background-image: url("/assets/images/arcologies-landscape.jpg");
+  background-image: url("../images/arcologies-landscape.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
