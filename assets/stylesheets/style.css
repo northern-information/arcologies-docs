@@ -14,12 +14,6 @@ code,
 pre {
   color: #000000; }
 
-h1 {
-  letter-spacing: 25px; }
-
-@media (max-width: 576px) {
-  h1 {
-    letter-spacing: 15px; } }
 h2 {
   font-weight: 600; }
 
@@ -67,6 +61,13 @@ img {
   .navbar a:active {
     text-decoration: none; }
 
+iframe {
+  max-width: 100%; }
+
+.row-dark {
+  padding: 20px 0;
+  background: #444444; }
+
 .jumbotron {
   background-image: url("../images/arcologies-landscape.jpg");
   background-position: center;
@@ -75,17 +76,9 @@ img {
   height: 80vh;
   margin: 0 -15px 0 -15px; }
 
-.tagline {
-  color: #444444;
-  font-style: italic;
-  margin: auto;
-  text-align: center; }
-
-#download {
-  margin: 80px auto 0 auto;
-  padding: 20px 50px;
-  text-decoration: none; }
-
+@media (max-width: 576px) {
+  .jumbotron {
+    height: 50vh; } }
 #toc {
   position: sticky;
   top: 4rem;
