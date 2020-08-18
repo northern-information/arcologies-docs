@@ -6,19 +6,53 @@ layout: default
 
 <div class="row">
   <div class="col mb-5">
-    <h2 id="overview">Overview</h2>
+    <h2 id="arcologies" class="add-spacing">arcologies</h2>
     <hr>
     <div class="row">
       <div class="col-lg-6 col-sm-12">
+        <h3>&mdash; In Brief</h3>
         <ul>
           <li>Randomly seed and intentionally organize <strong>cells</strong> on the grid.</li>
           <li>Cycle through their <strong>structures</strong> to define behavior.</li>
           <li>Open their <strong>ports</strong> to create <strong>leylines</strong>.</li>
-          <li><strong>Signals</strong> spawn from these open ports under diffent conditions.</li>
+          <li>Toggle playback and watch as <strong>signals</strong> spawn from (some) open ports.</li>
           <li>Use signals to <strong>control logic</strong>, play <strong>synths</strong>, trigger <strong>samples</strong>, and route to <strong>outboard gear</strong>.</li>
           <li>Analyse and sculpt the emergent <strong>sounds</strong>.</li>
           <li><strong>Save</strong> and <strong>share</strong>.</li>
         </ul>
+      </div>
+      <div class="col-lg-6 col-sm-12">
+        <h3>&mdash; Requirements</h3>
+        <ul>
+          <li>monome norns <code>200604</code></li>
+          <li>monome "varibright" grid</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col mb-5">
+    <h2 id="interface">Interface</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3>&mdash; norns</h3>
+        <p>Encoder one (e1) always navigates horizontally between pages. Encoder two (e2) always scrolls through menu items. Encoder three (e3) always changes item values.</p>
+        <p>Key one (k1) always exits to the main norns menu. Key two (k2) always toggles playback. Key three (k3) always deletes the selected cell.</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h3>&mdash; grid</h3>
+        <p>Press any key to create and/or select a cell. Press again to cycle through structures. Press an adjacent key to toggle ports. Press any empty key to deselect.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <h3>&mdash; norns (advanced)</h3>
+        <p>Long press k3 to trigger a countdown and delete all cells.</p>
       </div>
     </div>
   </div>
@@ -30,50 +64,10 @@ layout: default
   <div class="col mb-5">
     <h2 id="cells">Cells</h2>
     <hr>
-    <p>Cells are the building blocks of <strong>arcologies</strong>.</p>
+    <p>Cells are the building blocks of <strong>arcologies</strong>. Each key of grid represents a cell. Each cell has a structure, but these structures can be changed. Structures define qualities, behaviors, and attributes of a cell.</p>
+    <p>Cells also have four ports, each of which can either be open or closed. Ports direct the flow of signals.</p>
   </div>
 </div>
-
-
-
-<div class="row">
-  <div class="col mb-5">
-    <h3 id="ports">Ports</h4>
-    <hr>
-    <p>Ports direct the flow of signals.</p>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col mb-5">
-    <h3 id="structures">Structures</h3>
-    <hr>
-    <p>Each active cell has one structure.</p>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col mb-5">
-    <h3 id="notes">Notes</h3>
-    <hr>
-    <p>...</p>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="col mb-5">
-    <h3 id="metabolism">Metabolism</h3>
-    <hr>
-    <p>Metabolism is the rate at which hives birth signals.</p>
-  </div>
-</div>
-
 
 
 <div class="row">
@@ -89,12 +83,16 @@ layout: default
 </div>
 
 
-
 <div class="row">
   <div class="col mb-5">
-    <h2 id="leylines">Leylines</h2>
+    <h2 id="other">Other</h2>
     <hr>
-    <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
+    <div class="row">
+      <div class="col">
+        <h3 id="cells">&mdash; Leylines</h3>
+          <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -118,6 +116,6 @@ layout: default
   <div class="col mb-5">
     <h2 id="credits">Credits</h3>
     <hr>
-    <p>Software & design by Tyler Etters. Logo and visual language of cell glyphs by Theresa Berg. This project would not have been possible without the generous mentorship, support, and patience of so many from the llllllll community. You know who you are! Thank you.</p>
+    <p>Software & design by Tyler Etters. Logo by Theresa Berg. Glyphs by both. This project would not have been possible without the generous mentorship, support, and patience of so many from the llllllll community. You know who you are! Thank you.</p>
   </div>
 </div>

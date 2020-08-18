@@ -17,9 +17,14 @@ pre {
 h2 {
   font-weight: 600; }
 
+h2.add-spacing {
+  letter-spacing: 10px; }
+
 h3 {
   font-size: 1.25rem;
-  font-weight: 600; }
+  font-weight: 600;
+  font-style: italic;
+  color: #28A745; }
 
 h4 {
   font-size: 1rem;
@@ -47,7 +52,7 @@ a.btn:hover {
 
 hr {
   margin-top: 0;
-  border-top: 1px solid #000000; }
+  border-top: 2px solid #28A745; }
 
 img {
   max-width: 100%; }
@@ -92,6 +97,9 @@ iframe {
   #toc .nav-link {
     color: #007BFF;
     padding: 0.25rem 0.5rem; }
+  #toc .nav-link.add-spacing {
+    letter-spacing: 4px;
+    text-decoration: none; }
   #toc .nav-link.active {
     color: #FFFFFF;
     background-color: #007BFF; }
