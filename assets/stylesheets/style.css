@@ -85,6 +85,8 @@ iframe {
 .row-dark {
   padding: 20px 0;
   background: #444444; }
+  .row-dark p {
+    color: #FFFFFF; }
 
 .jumbotron {
   background-image: url("../images/arcologies-landscape.jpg");
