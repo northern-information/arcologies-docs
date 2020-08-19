@@ -24,7 +24,7 @@ h3 {
   font-size: 1.25rem;
   font-weight: 600;
   font-style: italic;
-  color: #28A745; }
+  color: #777777; }
 
 h4 {
   font-size: 1rem;
@@ -52,7 +52,18 @@ a.btn:hover {
 
 hr {
   margin-top: 0;
-  border-top: 2px solid #28A745; }
+  border-top: 2px solid #444444; }
+
+.card-body hr {
+  border-top: 2px solid #848484; }
+.card-body ul {
+  padding: 0;
+  list-style: none; }
+  .card-body ul li {
+    background: #FFFFFF;
+    padding: 0 5px;
+    margin: 0 0 10px 0;
+    border-radius: 4px; }
 
 img {
   max-width: 100%; }
@@ -103,5 +114,8 @@ iframe {
   #toc .nav-link.active {
     color: #FFFFFF;
     background-color: #007BFF; }
+  #toc .sub-nav.active {
+    color: #007BFF;
+    background-color: #FFFFFF; }
 
 /*# sourceMappingURL=style.css.map */

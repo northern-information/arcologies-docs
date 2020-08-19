@@ -2,3 +2,6 @@ title: "arcologies: docs"
 description: an interactive environment for designing 2d sound arcologies with norns and grid
 baseurl: /arcologies-docs
 url: https://tyleretters.github.io/arcologies-docs
+collections_dir: collections
+collections:
+  - structures

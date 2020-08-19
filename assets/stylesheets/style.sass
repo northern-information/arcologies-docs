@@ -31,7 +31,7 @@ h3
   font-size: 1.25rem
   font-weight: 600
   font-style: italic
-  color: $green
+  color: lighten($grey, 20%)
 
 h4
   font-size: 1rem
@@ -59,7 +59,20 @@ a.btn:hover
 
 hr
   margin-top: 0
-  border-top: 2px solid $green
+  border-top: 2px solid $grey
+
+.card-body
+  hr
+    border-top: 2px solid lighten($grey, 25%)
+  ul
+    padding: 0
+    list-style: none
+    li
+      background: $white
+      padding: 0 5px
+      margin: 0 0 10px 0
+      border-radius: 4px
+
 
 img
   max-width: 100%
@@ -116,3 +129,7 @@ iframe
   .nav-link.active
     color: $white
     background-color: $blue
+
+  .sub-nav.active
+    color: $blue
+    background-color: $white
