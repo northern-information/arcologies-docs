@@ -21,7 +21,7 @@
           <h2 id="arcologies" class="add-spacing">arcologies</h2>
           <hr>
           <div class="row">
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12 mb-5">
               <h3>&mdash; In Brief</h3>
               <ul>
                 <li>Randomly seed and intentionally organize <strong>cells</strong> on the grid.</li>
@@ -33,12 +33,38 @@
                 <li><strong>Save</strong> and <strong>share</strong>.</li>
               </ul>
             </div>
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-6 col-sm-12 mb-5">
               <h3>&mdash; Requirements</h3>
               <ul>
                 <li>monome norns <code>200604</code></li>
                 <li>monome "varibright" grid</li>
               </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 mb-5">
+              <img src="{{ site.url}}/assets/images/alpha-screenshot-home.png">
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-5">
+              <img src="{{ site.url}}/assets/images/alpha-screenshot-hive.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 mb-5">
+              <img src="{{ site.url}}/assets/images/alpha-screenshot-analysis.png">
+            </div>
+            <div class="col-lg-6 col-sm-12 mb-5">
+              <img src="{{ site.url}}/assets/images/alpha-screenshot-note.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-sm-12 mb-5">
+              <img src="{{ site.url}}/assets/images/alpha-screenshot-structure.png">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col mb-5">
+              <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Screenshots are from the alpha build.</em></div>
             </div>
           </div>
         </div>
@@ -68,7 +94,7 @@
               <p>When changing values with e3, some items will use a pop-up menu. Unless otherwise specified on the screen, a 0.4 second threshold of inactivity (i.e. less than half a second after you stop turning e3) will result in returning to the previous menu. Note that the value selection is instantaneous - not 0.4 seconds - and some pop-up menus have an ABORT option available at the "bottom" of the values (i.e. spin e3 counter-clockwise until you see ABORT).</p>
             </div>
             <div class="col-md-6 col-sm-12">
-              <img src="assets/images/norns.jpg">
+              <img src="{{ site.url}}/assets/images/norns.jpg">
             </div>
           </div>
         </div>
@@ -117,7 +143,7 @@
           <div class="card text-white bg-dark mb-5">
             <div class="card-header"><h5 class="card-title">{{ structure.name }}</h5></div>
             <div class="card-body">
-              <img src="assets/images/structures/{{ structure.image }}" class="mx-auto d-block">
+              <img src="{{ site.url }}/assets/images/structures/{{ structure.image }}" class="mx-auto d-block">
               <p class="card-text text-center"><em>"{{ structure.flavor }}"</em></p>
               <hr>
               <p class="card-text">{{ structure.content }}</p>
