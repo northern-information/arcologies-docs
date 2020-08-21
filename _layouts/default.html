@@ -122,6 +122,11 @@
           <p>Signals allow cells to ineract at a distance. Some cells emit signals. Other cells destory signals. Yet others multiply, divide, and change the direction of signals.</p>
           <p>If two (or more) would occupy the same coordinate at the same time, they will all be destroyed.</p>
           <p>Signals are destroyed when they leave the boundaries of the grid.</p>
+          <div class="row">
+            <div class="col mb-5">
+              <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Signals are like "bangs" from Max/MSP, PureData, Orca etc.</em></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -170,31 +175,31 @@
           <table class="table">
             <tr>
               <th scope="row">Index</th>
-              <td>description</td>
-            </tr>
-            <tr>
-              <th scope="row">Length</th>
-              <td>description</td>
+              <td>Pointer a cell uses to keep track of its own state.</td>
             </tr>
             <tr>
               <th scope="row">Metabolism</th>
-              <td>description</td>
+              <td>The rate at which a cell behaves. 1 is fastest, 16 is slowest, 0 is off.</td>
             </tr>
             <tr>
-              <th scope="row">Note</th>
-              <td>description</td>
+              <th scope="row">Note(s)</th>
+              <td>A musical note.</td>
             </tr>
             <tr>
               <th scope="row">Offset</th>
-              <td>description</td>
+              <td>The distance a cell is shifted.</td>
             </tr>
             <tr>
               <th scope="row">Probability</th>
-              <td>description</td>
+              <td>Odds of a cell doing something.</td>
+            </tr>
+            <tr>
+              <th scope="row">Structure</th>
+              <td>Defines all attributes and behaviors of a cell.</td>
             </tr>
             <tr>
               <th scope="row">Velocity</th>
-              <td>description</td>
+              <td>Note velocity. 0-127.</td>
             </tr>
           </table>
         </div>
@@ -208,16 +213,18 @@
           <hr>
 
           <h3>&mdash; Port Nuance</h3>
-          <p>On the grid, ports are only <em>displayed as adjacent</em> to the selected cell. Cells can have neighbors cells this close.</p>
+          <p>On the grid, ports are only <em>displayed as adjacent</em> to the selected cell. The ports are actually just attributes of a given cell/key. Each cell has 4 ports (unless the cell is along the perimeter of the grid in which case they have only 3 <span style="font-size:.75rem">(or 2 for corners <span style="font-size:.5rem">(sorry, I know it is complicated)</span>)</span>.)</p>
+          <p>In other words, think of ports at little tardigrade-sized doors on the walls of the keys themselves.</p>
+          <p>This means cells can be right next to each other and talk freely between their ports. When you select a cell, that cells ports will be drawn over any adjacent cells, but he adjacent cells continue to exist.</p>
 
           <h3>&mdash; Leylines</h3>
-          <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
+          <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a neighboring cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
           
           <h3>&mdash; Time Signature & Polyrhythms</h3>
           <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive and set the metabolism. You'll graphically see how these two attributes interact onscreen. Finally, change the hive's offset. Note that since singals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
 
           <h3>&mdash; Seeding</h3>
-          <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is artifically capped to 32. Seeding is not intelligent - you may generate an arcology with 20 gates, or an arcology with 10 hives and 12 shrines that have no connecting signals.</p>
+          <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is artifically capped to 32. Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (more unlikely.)</p>
 
           <h3>&mdash; Pun?</h3>
           <p>No, <strong>arcologies</strong> is not a pun about monome arc. However, I do plan to add optional arc features in the future.</p>
@@ -233,8 +240,8 @@
           <h3>&mdash; Chords</h3>
           <ol>
             <li>Using only one hive and three shrines, make a chord.</li>
-            <li>Now change the hive into a gate and bang it with a hive.</li>
-            <li>Now a add second chord by adding a second hive but <em>only one more shrine</em>.</li>
+            <li>Now change the hive into a gate. Add a new hive to send signals to the gate.</li>
+            <li>Now add second chord by adding a second hive but <em>only one more shrine</em>.</li>
           </ol>
           
           <h3>&mdash; Arpeggio</h3>
