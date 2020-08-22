@@ -1,5 +1,5 @@
 ---
-order: 7
+order: 9
 idf: aviary
 name: Aviary
 image: aviary.png

@@ -6,20 +6,13 @@
     <a class="nav-link" href="#signals">Signals</a>
     <a class="nav-link" href="#structures">Structures</a>
     <nav class="nav nav-pills flex-column">
-      <a class="nav-link sub-nav ml-3" href="#hive">Hive</a>
-      <a class="nav-link sub-nav ml-3" href="#shrine">Shrine</a>
-      <a class="nav-link sub-nav ml-3" href="#gate">Gate</a>
-      <a class="nav-link sub-nav ml-3" href="#rave">Rave</a>
-      <a class="nav-link sub-nav ml-3" href="#topiary">Topiary</a>
-      <a class="nav-link sub-nav ml-3" href="#maze">Maze</a>
-      <a class="nav-link sub-nav ml-3" href="#aviary">Aviary</a>
-      <a class="nav-link sub-nav ml-3" href="#forest">Forest</a>
-      <a class="nav-link sub-nav ml-3" href="#dome">Dome</a>
-      <a class="nav-link sub-nav ml-3" href="#solarium">Solarium</a>
-      <a class="nav-link sub-nav ml-3" href="#garden">Garden</a>
+      {% assign structures_by_order = site.structures | sort: "order" %}
+      {% for structure in structures_by_order %}
+      <a class="nav-link sub-nav ml-3" href="#{{ structure.idf }}">{{ structure.name }}</a>
+      {% endfor %}
     </nav>
     <a class="nav-link" href="#attributes">Attributes</a>
-    <a class="nav-link" href="#other">Other</a>
+    <a class="nav-link" href="#miscellanea">Miscellanea</a>
     <a class="nav-link" href="#challenges">Challenges</a>
     <a class="nav-link" href="#philosophy">Philosophy</a>
     <a class="nav-link" href="#credits">Credits</a>

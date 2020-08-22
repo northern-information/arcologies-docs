@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 8
 idf: solarium
 name: Solarium
 image: solarium.png

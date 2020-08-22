@@ -23,8 +23,7 @@ h2.add-spacing {
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  font-style: italic;
-  color: #777777; }
+  font-style: italic; }
 
 h4 {
   font-size: 1rem;
@@ -56,10 +55,10 @@ hr {
 
 .card-body hr {
   border-top: 2px solid #848484; }
-.card-body ul {
+.card-body ul.attributes {
   padding: 0;
   list-style: none; }
-  .card-body ul li {
+  .card-body ul.attributes li {
     background: #FFFFFF;
     padding: 0 5px;
     margin: 0 0 10px 0;

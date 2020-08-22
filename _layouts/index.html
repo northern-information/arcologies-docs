@@ -117,11 +117,12 @@
         <div class="col mb-5">
           <h2 id="signals">Signals</h2>
           <hr>
-          <p>Like <a href="https://en.wikipedia.org/wiki/Photon">photons</a>, signals are the elementary particle of <strong>arcologies</strong>. All signals are created equal: they move at the same speed, have the same attributes, and interact with the world around them exactly as each other signal would. Signals really only have one meaningful attribute: a <em>heading</em>.</p>
+          <p>Like <a href="https://en.wikipedia.org/wiki/Photon#Wave%E2%80%93particle_duality_and_uncertainty_principles">photons</a>, signals are the elementary particle of <strong>arcologies</strong>. All signals are created equal: they move at the same speed, have the same attributes, and interact with the world around them exactly as each other signal would. Signals really only have one meaningful attribute: a <em>heading</em>.</p>
           <p>Signals move in straight lines. Signal headings are simply the cardinal directions of north, east, south, and west.</p>
           <p>Signals allow cells to ineract at a distance. Some cells emit signals. Other cells destory signals. Yet others multiply, divide, and change the direction of signals.</p>
           <p>If two (or more) would occupy the same coordinate at the same time, they will all be destroyed.</p>
           <p>Signals are destroyed when they leave the boundaries of the grid.</p>
+          <p>In <strong>arcolologies</strong> the glyph for a signal is <code>Y</code>.</p>
           <div class="row">
             <div class="col mb-5">
               <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Signals are like "bangs" from Max/MSP, PureData, Orca etc.</em></div>
@@ -154,7 +155,7 @@
               <p class="card-text">{{ structure.content }}</p>
               <hr>
               <h5 class="card-title">Attributes</h5>
-              <ul>
+              <ul class="attributes">
                 {% for attribute in structure.attributes %}
                 <li><pre>{{ attribute }}</pre></li>
                 {% endfor %}
@@ -179,7 +180,7 @@
             </tr>
             <tr>
               <th scope="row">Metabolism</th>
-              <td>The rate at which a cell behaves. 1 is fastest, 16 is slowest, 0 is off.</td>
+              <td>The rate at which a cell interacts with the transport.</td>
             </tr>
             <tr>
               <th scope="row">Note(s)</th>
@@ -192,6 +193,10 @@
             <tr>
               <th scope="row">Probability</th>
               <td>Odds of a cell doing something.</td>
+            </tr>
+            <tr>
+              <th scope="row">Pulses</th>
+              <td>Affects sequential flow of data through time.</td>
             </tr>
             <tr>
               <th scope="row">Structure</th>
@@ -209,7 +214,7 @@
 
       <div class="row">
         <div class="col mb-5">
-          <h2 id="other">Other</h2>
+          <h2 id="miscellanea">Miscellanea</h2>
           <hr>
 
           <h3>&mdash; Port Nuance</h3>
@@ -217,17 +222,22 @@
           <p>In other words, think of ports at little tardigrade-sized doors on the walls of the keys themselves.</p>
           <p>This means cells can be right next to each other and talk freely between their ports. When you select a cell, that cells ports will be drawn over any adjacent cells, but the adjacent cells continue to exist.</p>
 
+          <h3>&mdash; Cellular Memory</h3>
+          <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a topiary with a bunch of notes configured, then switch it to a gate, then back to a topiary the same notes will remain. The gate (which doesn't have notes) won't erase them.
+          <p>Similarly, if you were to switch the topiary to a shrine, change the first note, then back to a topiary, you'd see the topiary will inherit the change.</p>
+
           <h3>&mdash; Leylines</h3>
           <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a neighboring cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
           
           <h3>&mdash; Time Signature & Polyrhythms</h3>
-          <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive and set the metabolism. You'll graphically see how these two attributes interact onscreen. Finally, change the hive's offset. Note that since singals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
+          <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact onscreen. With a global length of 16 and a hive with a metabolism of 7, for example, yo</p>
+          <p>Finally, change the hive's offset. Note that since singals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
 
           <h3>&mdash; Seeding</h3>
           <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is artifically capped to 32. Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (more unlikely.)</p>
 
           <h3>&mdash; Pun?</h3>
-          <p>No, <strong>arcologies</strong> is not a pun about monome arc. However, I do plan to add optional arc features in the future.</p>
+          <p><strong>arcologies</strong> is not a pun on monome arc. However, I do plan to add optional arc features in the future.</p>
 
         </div>
       </div>
