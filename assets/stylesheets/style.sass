@@ -1,8 +1,8 @@
 $black: #000000
 $grey: #444444
 $white: #FFFFFF
-$green: #28A745
 $blue: #007BFF
+$bootstrapGrey: #E2E3E5
 
 .sans-serif
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
@@ -19,7 +19,16 @@ body
 code,
 pre
   @extend .monospace
-  color: $black
+  color: $grey 
+  background: $bootstrapGrey
+  padding: 4px
+  border-radius: 2px
+
+pre
+  padding: 8px
+
+  &.bg-dark
+    color: $white
 
 h2
   font-weight: 600
@@ -60,17 +69,26 @@ hr
   margin-top: 0
   border-top: 2px solid $grey
 
+.card-header
+  border-bottom: none
+  background: none
+  h5
+    margin-bottom: 0
+
 .card-body
   hr
     border-top: 2px solid lighten($grey, 25%)
   code
+    background: none
     color: $white
-    font-size: .75rem
   ul.attributes
     padding: 0
     list-style: none
     li
+      @extend .monospace
+      font-size: 1rem
       background: $white
+      color: $grey
       padding: 0 5px
       margin: 0 0 10px 0
       border-radius: 4px

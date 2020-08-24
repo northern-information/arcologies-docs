@@ -2,7 +2,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
 .monospace, code,
-pre {
+pre, .card-body ul.attributes li {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 body {
@@ -12,7 +12,15 @@ body {
 
 code,
 pre {
-  color: #000000; }
+  color: #444444;
+  background: #E2E3E5;
+  padding: 4px;
+  border-radius: 2px; }
+
+pre {
+  padding: 8px; }
+  pre.bg-dark {
+    color: #FFFFFF; }
 
 h2 {
   font-weight: 600; }
@@ -53,16 +61,24 @@ hr {
   margin-top: 0;
   border-top: 2px solid #444444; }
 
+.card-header {
+  border-bottom: none;
+  background: none; }
+  .card-header h5 {
+    margin-bottom: 0; }
+
 .card-body hr {
   border-top: 2px solid #848484; }
 .card-body code {
-  color: #FFFFFF;
-  font-size: 0.75rem; }
+  background: none;
+  color: #FFFFFF; }
 .card-body ul.attributes {
   padding: 0;
   list-style: none; }
   .card-body ul.attributes li {
+    font-size: 1rem;
     background: #FFFFFF;
+    color: #444444;
     padding: 0 5px;
     margin: 0 0 10px 0;
     border-radius: 4px; }

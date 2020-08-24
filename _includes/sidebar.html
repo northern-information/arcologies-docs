@@ -1,24 +1,23 @@
-<nav id="toc" class="col-md-2 d-none d-md-block sidebar">
-  <div class="sidebar-sticky">
-    <ul class="nav flex-column">
-      <li class="nav-item"><a class="nav-link add-spacing" href="#arcologies"><strong>arcologies</strong></a></li>
-      <li class="nav-item"><a class="nav-link" href="#interface">Interface</a></li>
-      <li class="nav-item"><a class="nav-link" href="#cells">Cells</a></li>
-      <li class="nav-item"><a class="nav-link" href="#signals">Signals</a></li>
-      <li class="nav-item"><a class="nav-link" href="#structures">Structures</a></li>
-      <nav class="nav nav-pills flex-column">
-        {% assign structures_by_order = site.structures | sort: "order" %}
-        {% for structure in structures_by_order %}
-        <li class="nav-item"><a class="nav-link sub-nav ml-3" href="#{{ structure.idf }}">{{ structure.name }}</a></li>
-        {% endfor %}
-      </nav>
-      <li class="nav-item"><a class="nav-link" href="#attributes">Attributes</a></li>
-      <li class="nav-item"><a class="nav-link" href="#miscellanea">Miscellanea</a></li>
-      <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
-      <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
-      <li class="nav-item"><a class="nav-link" href="#credits">Credits</a></li>
-      <li class="nav-item mt-3"><a href="#" class="btn btn-block btn-primary">Discuss on llllllll</a></li>
-      <li class="nav-item mt-3"><a href="https://github.com/tyleretters/arcologies/" class="btn btn-block btn-primary"><i class="fab fa-github"></i> Contribute</a></li>
-    </ul>
-  </div>
-</nav>
+<div class="sidebar-sticky">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a class="nav-link add-spacing" href="#arcologies"><strong>arcologies</strong></a></li>
+    <li class="nav-item"><a class="nav-link" href="#interface">Interface</a></li>
+    <li class="nav-item"><a class="nav-link" href="#cells">Cells</a></li>
+    <li class="nav-item"><a class="nav-link" href="#signals">Signals</a></li>
+    <li class="nav-item"><a class="nav-link" href="#structures">Structures</a></li>
+    <nav class="nav nav-pills flex-column">
+      {% assign structures_by_order = site.structures | sort: "order" %}
+      {% for structure in structures_by_order %}
+      <li class="nav-item"><a class="nav-link sub-nav ml-3" href="#{{ structure.idf }}">{{ structure.name }}</a></li>
+      {% endfor %}
+    </nav>
+    <li class="nav-item"><a class="nav-link" href="#attributes">Attributes</a></li>
+    <li class="nav-item"><a class="nav-link" href="#miscellanea">Miscellanea</a></li>
+    <li class="nav-item"><a class="nav-link" href="#challenges">Challenges</a></li>
+    <li class="nav-item"><a class="nav-link" href="#ecosystem">Ecosystem</a></li>
+    <li class="nav-item"><a class="nav-link" href="#philosophy">Philosophy</a></li>
+    <li class="nav-item"><a class="nav-link" href="#credits">Credits</a></li>
+    <li class="nav-item mt-3"><a href="#" class="btn btn-block btn-primary">Discuss on llllllll</a></li>
+    <li class="nav-item mt-3"><a href="https://github.com/tyleretters/arcologies/" class="btn btn-block btn-primary"><i class="fab fa-github"></i> Contribute</a></li>
+  </ul>
+</div>
