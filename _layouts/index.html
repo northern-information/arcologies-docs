@@ -179,8 +179,16 @@
               <td>Pointer a cell uses to keep track of its own state.</td>
             </tr>
             <tr>
+              <th scope="row">Level</th>
+              <td>Percentage volume control.</td>
+            </tr>
+            <tr>
               <th scope="row">Metabolism</th>
               <td>The rate at which a cell interacts with the transport.</td>
+            </tr>
+            <tr>
+              <th scope="row">Network</th>
+              <td>Define a channel of operations.</td>
             </tr>
             <tr>
               <th scope="row">Note(s)</th>
@@ -199,12 +207,16 @@
               <td>Affects sequential flow of data through time.</td>
             </tr>
             <tr>
+              <th scope="row">Range (Min & Max)</th>
+              <td>Defines the scope within which a cell operates.</td>
+            </tr>
+            <tr>
               <th scope="row">Structure</th>
               <td>Defines all attributes and behaviors of a cell.</td>
             </tr>
             <tr>
               <th scope="row">Velocity</th>
-              <td>Note velocity. 0-127.</td>
+              <td>Midi velocity from 0-127.</td>
             </tr>
           </table>
         </div>
@@ -223,18 +235,18 @@
           <p>This means cells can be right next to each other and talk freely between their ports. When you select a cell, that cells ports will be drawn over any adjacent cells, but the adjacent cells continue to exist.</p>
 
           <h3>&mdash; Cellular Memory</h3>
-          <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a topiary with a bunch of notes configured, then switch it to a gate, then back to a topiary the same notes will remain. The gate (which doesn't have notes) won't erase them.
-          <p>Similarly, if you were to switch the topiary to a shrine, change the first note, then back to a topiary, you'd see the topiary will inherit the change.</p>
+          <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a hive with a metabolism configured, then switch it to a shrine, then back to a hive the same metabolism will remain. The gate (which doesn't have metabolism) won't erase them.
+          <p>One key exception to this is notes. Topiaries "re-roll" their notes every mutation. Fickle things, topiaries.</p>
 
           <h3>&mdash; Leylines</h3>
           <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a neighboring cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
           
           <h3>&mdash; Time Signature & Polyrhythms</h3>
-          <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact onscreen. With a global length of 16 and a hive with a metabolism of 7, for example, yo</p>
+          <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact onscreen. With a global length of 16 and a hive with a metabolism of 7, for example, you'll be able to create a "<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2" type of rhythm.</p>
           <p>Finally, change the hive's offset. Note that since singals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
 
           <h3>&mdash; Seeding</h3>
-          <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is artifically capped to 32. Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (more unlikely.)</p>
+          <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is arbitrarily capped to 32 cells (anything more than this felt super chaotic to me.) Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (even more unlikely.) I find the feature a really fun way to get inspired and start a session.</p>
 
           <h3>&mdash; Pun?</h3>
           <p><strong>arcologies</strong> is not a pun on monome arc. However, I do plan to add optional arc features in the future.</p>
@@ -281,7 +293,7 @@
           <hr>
           <p>For monome <a href="https://monome.org/docs/norns">norns</a> and <a href="https://monome.org/docs/grid">grid</a>, <strong>arcologies</strong> is a 21st century instrument for musical composition and discovery.</p>
           <p>The core design objective for this software is clarity. Each key and encoder on norns have a dedicated function. All the keys on the grid share the same behavior. The menus are built to be fast, intuitive, cohesive, and consistent. With a foundation that is (hopefully) quick to master, the arcologist's focus can shift to sculpting emergent and complex compositions.</p>
-          <p>The design of <strong>arcologies</strong> heavily inspired by the two-dimensionality of <a href="https://100r.co/site/orca.html">Orca</a>, the polymorphism of <a href="https://ornament-and-cri.me/">ornament & crime</a>, and the immediacy of <a href="https://monome.org/docs/meadowphysics/">meadowphysics</a>. Other curios played a part, too: <a href="http://www.bay12games.com/dwarves/">Dwarf Fortress</a>, the <a href="https://en.wikipedia.org/wiki/Tower_defense">tower defense</a> genre, <a href="https://en.wikipedia.org/wiki/SimCity">SimCity</a>, and the <a href="http://generativemusic.com/">Eno / Chilvers</a> suite of generative applications, carbon-based life, water, the anthropocene, supply chains, <a href="https://en.wikipedia.org/wiki/The_Mushroom_at_the_End_of_the_World">The Mushroom at the End of the World</a>, <a href="https://dark-mountain.net/">The Dark Mountain Project</a>, <a href="https://soundcloud.com/eco-futurism-corp">Eco Futurism Corp</a>, <a href="https://danielseankelly.wordpress.com/2019/04/24/in-the-days-of-the-seasteaders-or-how-the-extropian-detritivores-broke-capitalism/">"seasteading"</a>, the gedankenexperiment-prompt: "sound artist's work in a William Gibson novel?", <a href="https://journal.highlandsolutions.com/cellular-automata-in-javascript-c0336af3e1f3">Conway's Game of Life</a>, Garfield Park Conservatory, the Epcot Center, <a href="https://en.wikipedia.org/wiki/Buckminster_Fuller">Buckminster Fuller</a>, and the need to challenge myself and create something beautiful during this fucking pandemic. And, of course, actual <a href="https://en.wikipedia.org/wiki/Arcology">arcologies</a> and <a href="https://en.wikipedia.org/wiki/Metabolism_(architecture)">the architectural movement known as <em>metabolism</em></a>.</p>
+          <p>The design of <strong>arcologies</strong> heavily inspired by the two-dimensionality of <a href="https://100r.co/site/orca.html">Orca</a>, the polymorphism of <a href="https://ornament-and-cri.me/">ornament & crime</a>, the immediacy of <a href="https://monome.org/docs/meadowphysics/">meadowphysics</a>, and the uncompromising vision of <a href="https://l.llllllll.co/cheat-codes">cheat codes</a>. I've always been interested in <a href="https://en.wikipedia.org/wiki/Emergence">emergence</a> and wanted to push that line of inquiry further than I have before. Other curios played a part, too: <a href="http://www.bay12games.com/dwarves/">Dwarf Fortress</a>, the <a href="https://en.wikipedia.org/wiki/Tower_defense">tower defense</a> genre, <a href="https://en.wikipedia.org/wiki/SimCity">SimCity</a>, and the <a href="http://generativemusic.com/">Eno / Chilvers</a> suite of generative applications, carbon-based life, water, the anthropocene, supply chains, <a href="https://en.wikipedia.org/wiki/The_Mushroom_at_the_End_of_the_World">The Mushroom at the End of the World</a>, <a href="https://dark-mountain.net/">The Dark Mountain Project</a>, <a href="https://soundcloud.com/eco-futurism-corp">Eco Futurism Corp</a>, <a href="https://danielseankelly.wordpress.com/2019/04/24/in-the-days-of-the-seasteaders-or-how-the-extropian-detritivores-broke-capitalism/">"seasteading"</a>, the gedankenexperiment-prompt: "sound artist's work in a William Gibson novel?", <a href="https://journal.highlandsolutions.com/cellular-automata-in-javascript-c0336af3e1f3">Conway's Game of Life</a>, Garfield Park Conservatory, the Epcot Center, <a href="https://en.wikipedia.org/wiki/Buckminster_Fuller">Buckminster Fuller</a>, and the need to challenge myself and create something beautiful during this fucking pandemic. And, of course, actual <a href="https://en.wikipedia.org/wiki/Arcology">arcologies</a> and <a href="https://en.wikipedia.org/wiki/Metabolism_(architecture)">the architectural movement known as <em>metabolism</em></a>.</p>
           <p><strong>arcologies</strong> is free, <a href="https://github.com/tyleretters/arcologies">open source</a>, and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
           <p>Contributions welcome.</p>
         </div>

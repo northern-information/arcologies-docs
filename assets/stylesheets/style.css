@@ -55,6 +55,9 @@ hr {
 
 .card-body hr {
   border-top: 2px solid #848484; }
+.card-body code {
+  color: #FFFFFF;
+  font-size: 0.75rem; }
 .card-body ul.attributes {
   padding: 0;
   list-style: none; }
