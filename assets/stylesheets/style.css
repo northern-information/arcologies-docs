@@ -102,13 +102,13 @@ iframe {
   .jumbotron {
     height: 50vh; } }
 #toc {
+  position: -webkit-sticky;
   position: sticky;
-  top: 4rem;
-  height: calc(100vh - 4rem);
-  overflow-y: auto;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 0.875rem; }
+  top: 48px;
+  height: calc(100vh - 48px);
+  padding-top: 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto; }
   #toc .nav-link {
     color: #007BFF;
     padding: 0.25rem 0.5rem; }

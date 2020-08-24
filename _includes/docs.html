@@ -1,0 +1,305 @@
+<div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+  <div class="row">
+
+    <div class="col mb-5">
+      <h2 id="arcologies" class="add-spacing">arcologies</h2>
+      <hr>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <h3>&mdash; In Brief</h3>
+          <ul>
+            <li>Randomly seed and intentionally organize <strong>cells</strong> on the grid.</li>
+            <li>Cycle through their <strong>structures</strong> to define behavior.</li>
+            <li>Open their <strong>ports</strong> to create <strong>leylines</strong>.</li>
+            <li>Toggle playback and watch as <strong>signals</strong> spawn from (some) open ports.</li>
+            <li>Use signals to <strong>control logic</strong>, play <strong>synths</strong>, trigger <strong>samples</strong>, and route to <strong>outboard gear</strong>.</li>
+            <li>Analyse and sculpt the emergent <strong>sounds</strong>.</li>
+            <li><strong>Save</strong> and <strong>share</strong>.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <h3>&mdash; Requirements</h3>
+          <ul>
+            <li>monome norns <code>200604</code></li>
+            <li>monome "varibright" grid</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <img src="{{ site.url}}/assets/images/alpha-screenshot-home.png">
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <img src="{{ site.url}}/assets/images/alpha-screenshot-hive.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <img src="{{ site.url}}/assets/images/alpha-screenshot-analysis.png">
+        </div>
+        <div class="col-lg-6 col-sm-12 mb-5">
+          <img src="{{ site.url}}/assets/images/alpha-screenshot-note.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-sm-12 mb-5">
+          <img src="{{ site.url}}/assets/images/alpha-screenshot-structure.png">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mb-5">
+          <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Screenshots are from the alpha build.</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="interface">Interface</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h3>&mdash; norns</h3>
+          <p>Encoder one (e1) always navigates horizontally between pages. Encoder two (e2) always scrolls through menu items. Encoder three (e3) always changes item values.</p>
+          <p>Key one (k1) always exits to the main norns menu. Key two (k2) always toggles playback. Key three (k3) always deletes the selected cell.</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h3>&mdash; grid</h3>
+          <p>Press any key to create and/or select a cell. Press again to (or an empty key) to deselect. Press an adjacent key to toggle ports.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h3>&mdash; norns (advanced)</h3>
+          <p>Long press k3 to trigger a countdown and delete all cells.</p>
+          <p>When changing values with e3, some items will use a pop-up menu. Unless otherwise specified on the screen, a 0.4 second threshold of inactivity (i.e. less than half a second after you stop turning e3) will result in returning to the previous menu. Note that the value selection is instantaneous - not 0.4 seconds - and some pop-up menus have an ABORT option available at the "bottom" of the values (i.e. spin e3 counter-clockwise until you see ABORT).</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="{{ site.url}}/assets/images/norns.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="cells">Cells</h2>
+      <hr>
+      <p>Cells are the building blocks of <strong>arcologies</strong>. Each key of grid represents a cell. Each cell has a structure, but these structures can be changed. Structures define qualities, behaviors, and attributes of a cell.</p>
+      <p>Cells also have four ports, each of which can either be open or closed. Ports direct the flow of signals.</p>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="signals">Signals</h2>
+      <hr>
+      <p>Like <a href="https://en.wikipedia.org/wiki/Photon#Wave%E2%80%93particle_duality_and_uncertainty_principles">photons</a>, signals are the elementary particle of <strong>arcologies</strong>. All signals are created equal: they move at the same speed, have the same attributes, and interact with the world around them exactly as each other signal would. Signals really only have one meaningful attribute: a <em>heading</em>.</p>
+      <p>Signals move in straight lines. Signal headings are simply the cardinal directions of north, east, south, and west.</p>
+      <p>Signals allow cells to ineract at a distance. Some cells emit signals. Other cells destory signals. Yet others multiply, divide, and change the direction of signals.</p>
+      <p>If two (or more) would occupy the same coordinate at the same time, they will all be destroyed.</p>
+      <p>Signals are destroyed when they leave the boundaries of the grid.</p>
+      <p>In <strong>arcolologies</strong> the glyph for a signal is <code>Y</code>.</p>
+      <div class="row">
+        <div class="col mb-5">
+          <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Signals are like "bangs" from Max/MSP, PureData, Orca etc.</em></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="structures">Structures</h2>
+      <hr>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    {% assign structures_by_order = site.structures | sort: "order" %}
+    {% for structure in structures_by_order %}
+    <div id="{{ structure.idf }}" class="col-md-4 col-sm-12">
+      <div class="card text-white bg-dark mb-5">
+        <div class="card-header"><h5 class="card-title">{{ structure.name }}</h5></div>
+        <div class="card-body">
+          <img src="{{ site.url }}/assets/images/structures/{{ structure.image }}" class="mx-auto d-block">
+          <p class="card-text text-center"><em>"{{ structure.flavor }}"</em></p>
+          <hr>
+          <p class="card-text">{{ structure.content }}</p>
+          <hr>
+          <h5 class="card-title">Attributes</h5>
+          <ul class="attributes">
+            {% for attribute in structure.attributes %}
+            <li><pre>{{ attribute }}</pre></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="attributes">Attributes</h2>
+      <hr>
+      <table class="table">
+        <tr>
+          <th scope="row">Capacity</th>
+          <td>Defines an upper limit before an event occurs.</td>
+        </tr>
+        <tr>
+          <th scope="row">Charge</th>
+          <td>Measure of energy, typically paired with capacity.</td>
+        </tr>
+        <tr>
+          <th scope="row">Index</th>
+          <td>Pointer a cell uses to keep track of its own state.</td>
+        </tr>
+        <tr>
+          <th scope="row">Level</th>
+          <td>Percentage volume control.</td>
+        </tr>
+        <tr>
+          <th scope="row">Metabolism</th>
+          <td>The rate at which a cell interacts with the transport.</td>
+        </tr>
+        <tr>
+          <th scope="row">Network</th>
+          <td>Define a channel of operations.</td>
+        </tr>
+        <tr>
+          <th scope="row">Note(s)</th>
+          <td>A musical note.</td>
+        </tr>
+        <tr>
+          <th scope="row">Offset</th>
+          <td>The distance a cell is shifted relative to the global length. Patterns wrap.</td>
+        </tr>
+        <tr>
+          <th scope="row">Probability</th>
+          <td>Odds of a cell doing something.</td>
+        </tr>
+        <tr>
+          <th scope="row">Pulses</th>
+          <td>Affects sequential flow of data through time.</td>
+        </tr>
+        <tr>
+          <th scope="row">Range (Min & Max)</th>
+          <td>Defines the scope within which a cell operates.</td>
+        </tr>
+        <tr>
+          <th scope="row">Structure</th>
+          <td>Defines all attributes and behaviors of a cell.</td>
+        </tr>
+        <tr>
+          <th scope="row">Velocity</th>
+          <td>Midi velocity from 0-127.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="miscellanea">Miscellanea</h2>
+      <hr>
+
+      <h3>&mdash; Port Nuance</h3>
+      <p>On the grid, ports are only <em>displayed as adjacent</em> to the selected cell. The ports are actually just attributes of a given cell/key. Each cell has 4 ports (unless the cell is along the perimeter of the grid in which case they have only 3 <span style="font-size:.75rem">(or 2 for corners <span style="font-size:.5rem">(sorry, I know it is complicated)</span>)</span>.)</p>
+      <p>In other words, think of ports at little tardigrade-sized doors on the walls of the keys themselves.</p>
+      <p>This means cells can be right next to each other and talk freely between their ports. When you select a cell, that cells ports will be drawn over any adjacent cells, but the adjacent cells continue to exist.</p>
+
+      <h3>&mdash; Cellular Memory</h3>
+      <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a hive with a metabolism configured, then switch it to a shrine, then back to a hive the same metabolism will remain. The gate (which doesn't have metabolism) won't erase them.
+      <p>One key exception to this is notes. Topiaries "re-roll" their notes every mutation. Fickle things, topiaries.</p>
+
+      <h3>&mdash; Leylines</h3>
+      <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a neighboring cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
+      
+      <h3>&mdash; Time Signature & Polyrhythms</h3>
+      <p>The concept of time signatures and polyrhythms aboslutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact onscreen. With a global length of 16 and a hive with a metabolism of 7, for example, you'll be able to create a "<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2" type of rhythm.</p>
+      <p>Finally, change the hive's offset. Note that since singals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
+
+      <h3>&mdash; Seeding</h3>
+      <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is arbitrarily capped to 32 cells (anything more than this felt super chaotic to me.) Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (even more unlikely.) I find the feature a really fun way to get inspired and start a session.</p>
+
+      <h3>&mdash; Pun?</h3>
+      <p><strong>arcologies</strong> is not a pun on monome arc. However, I do plan to add optional arc features in the future.</p>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="challenges">Challenges</h2>
+      <hr>
+      <p>These brief challenges are a great starting point for learning <strong>arcologies</strong>.</p>
+      <h3>&mdash; Chords</h3>
+      <ol>
+        <li>Using only one hive and three shrines, make a chord.</li>
+        <li>Now change the hive into a gate. Add a new hive to send signals to the gate.</li>
+        <li>Now add second chord by adding a second hive but <em>only one more shrine</em>.</li>
+      </ol>
+      
+      <h3>&mdash; Arpeggio</h3>
+      <ol>
+        <li>Using only one hive and six shrines, create an arpeggio.</li>
+        <li>Add six more shrines to create a second arpeggio.</li>
+      </ol>
+
+      <h3>&mdash; Interference</h3>
+      <ol>
+        <li>Signals cancel each other out. Use this to your advantage and create a melody that gets mutilitad by a rave.</li>
+      </ol>
+
+      <h3>&mdash; Packt</h3>
+      <ol>
+        <li>Using four hives and five shrines, create a meldoy but make sure you cannot see any of the signals.</li>
+      </ol>
+
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="philosophy">Philosophy</h3>
+      <hr>
+      <p>For monome <a href="https://monome.org/docs/norns">norns</a> and <a href="https://monome.org/docs/grid">grid</a>, <strong>arcologies</strong> is a 21st century instrument for musical composition and discovery.</p>
+      <p>The core design objective for this software is clarity. Each key and encoder on norns have a dedicated function. All the keys on the grid share the same behavior. The menus are built to be fast, intuitive, cohesive, and consistent. With a foundation that is (hopefully) quick to master, the arcologist's focus can shift to sculpting emergent and complex compositions.</p>
+      <p>The design of <strong>arcologies</strong> heavily inspired by the two-dimensionality of <a href="https://100r.co/site/orca.html">Orca</a>, the polymorphism of <a href="https://ornament-and-cri.me/">ornament & crime</a>, the immediacy of <a href="https://monome.org/docs/meadowphysics/">meadowphysics</a>, and the uncompromising vision of <a href="https://l.llllllll.co/cheat-codes">cheat codes</a>. I've always been interested in <a href="https://en.wikipedia.org/wiki/Emergence">emergence</a> and wanted to push that line of inquiry further than I have before. Other curios played a part, too: <a href="http://www.bay12games.com/dwarves/">Dwarf Fortress</a>, the <a href="https://en.wikipedia.org/wiki/Tower_defense">tower defense</a> genre, <a href="https://en.wikipedia.org/wiki/SimCity">SimCity</a>, and the <a href="http://generativemusic.com/">Eno / Chilvers</a> suite of generative applications, carbon-based life, water, the anthropocene, supply chains, <a href="https://en.wikipedia.org/wiki/The_Mushroom_at_the_End_of_the_World">The Mushroom at the End of the World</a>, <a href="https://dark-mountain.net/">The Dark Mountain Project</a>, <a href="https://soundcloud.com/eco-futurism-corp">Eco Futurism Corp</a>, <a href="https://danielseankelly.wordpress.com/2019/04/24/in-the-days-of-the-seasteaders-or-how-the-extropian-detritivores-broke-capitalism/">"seasteading"</a>, the gedankenexperiment-prompt: "sound artist's work in a William Gibson novel?", <a href="https://journal.highlandsolutions.com/cellular-automata-in-javascript-c0336af3e1f3">Conway's Game of Life</a>, Garfield Park Conservatory, the Epcot Center, <a href="https://en.wikipedia.org/wiki/Buckminster_Fuller">Buckminster Fuller</a>, and the need to challenge myself and create something beautiful during this fucking pandemic. And, of course, actual <a href="https://en.wikipedia.org/wiki/Arcology">arcologies</a> and <a href="https://en.wikipedia.org/wiki/Metabolism_(architecture)">the architectural movement known as <em>metabolism</em></a>.</p>
+      <p><strong>arcologies</strong> is free, <a href="https://github.com/tyleretters/arcologies">open source</a>, and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
+      <p>Contributions welcome.</p>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col mb-5">
+      <h2 id="credits">Credits</h3>
+      <hr>
+      <p>Software, design, & watercolors by Tyler Etters. Logo by Theresa Berg. Glyphs by both. This project would not have been possible without the generous mentorship, support, and patience of so many from the llllllll community. You know who you are! Thank you.</p>
+    </div>
+  </div>
+
+</div>
