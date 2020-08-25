@@ -1,9 +1,9 @@
 ---
-order: 11
+order: 13
 idf: tunnel
 name: Tunnel
 image: tunnel.png
-flavor: ...
+flavor: Each echoes the other.
 attributes: ['Network']
 ---
-...
+Routes incoming singles to each other tunnel on the same network.
