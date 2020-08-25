@@ -73,7 +73,7 @@
       <div class="col-md-6 col-sm-12">
         <h3>&mdash; norns (advanced)</h3>
         <p>Long press k3 to trigger a countdown and delete all cells.</p>
-        <p>When changing values with e3, some items will use a pop-up menu. Unless otherwise specified on the screen, a 0.4 second threshold of inactivity (i.e. less than half a second after you stop turning e3) will result in returning to the previous menu. Note that the value selection is instantaneous - not 0.4 seconds - and some pop-up menus have an ABORT option available at the "bottom" of the values (i.e. spin e3 counter-clockwise until you see ABORT).</p>
+        <p>When changing values with e3, some items will use a pop-up menu. Unless otherwise specified on the screen, a 0.5 second threshold of inactivity (i.e. less than half a second after you stop turning e3) will result in returning to the previous menu. Note that the value selection is instantaneous - not 0.5 seconds - and some pop-up menus have an ABORT option available at the "bottom" of the values (i.e. spin e3 counter-clockwise until you see ABORT).</p>
       </div>
       <div class="col-md-6 col-sm-12">
         <img src="{{ site.url}}/assets/images/norns.jpg">
@@ -308,9 +308,12 @@
       <li>Create two directories and divide the files into two sets of six.</li>
       <li>Name each set <code>1.wav</code>, <code>2.wav</code>, <code>3.wav</code>, <code>4.wav</code>, <code>5.wav</code>, & <code>6.wav</code>.</li>
       <li>Copy the pair of directories to norns at <code>/dust/audio/arcologies</code>.
-      <li>Now, rename one of them to <code>crypt</code> and play the samples with a crypt structure.</li>
+      <li>Now, rename one of them to <code>crypt</code> and play the samples with a crypt cell.</li>
       <li>While playing, swap the directory names: <code>mv crypt crypt_tmp && mv inactive_crypt crypt && mv crypt_tmp inactive_crypt</code>. What (doesn't) happen?</li>
       <li>What happens when you adjust the index on a crypt?</li>
+      <li>Install <strong>[crypts](https://github.com/tyleretters/crypts)</strong> & relaunch <strong>arcologies</strong>.</li>
+      <li>Play samples with a crypt cell.</li>
+      <li>While playing, navigate to the main norns edit menu and change the "CRYPT(S)" parameter.</li>
     </ol>
 
     <h3>&mdash; Syncopation</h3>
