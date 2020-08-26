@@ -6,12 +6,12 @@
       <div class="col-lg-6 col-sm-12 mb-5">
         <h3>&mdash; In Brief</h3>
         <ul>
-          <li>Randomly seed and intentionally organize <strong>cells</strong> on the grid.</li>
+          <li>Organize <strong>cells</strong> on the grid.</li>
           <li>Cycle through their <strong>structures</strong> to define behavior.</li>
-          <li>Open their <strong>ports</strong> to create <strong>leylines</strong>.</li>
-          <li>Toggle playback and watch as <strong>signals</strong> spawn from (some) open ports.</li>
+          <li>Open their <strong>ports</strong> .</li>
+          <li>Toggle playback and watch as <strong>signals</strong> are released and captured.</li>
           <li>Use signals to <strong>control logic</strong>, play <strong>synths</strong>, trigger <strong>samples</strong>, and route to <strong>outboard gear</strong>.</li>
-          <li>Analyze and sculpt the emergent <strong>sounds</strong>.</li>
+          <li>Analyze and sculpt the <strong>emergent</strong> system.</li>
           <li><strong>Save</strong> and <strong>share</strong>.</li>
         </ul>
       </div>
@@ -170,6 +170,14 @@
         <td>Measure of energy, typically paired with capacity.</td>
       </tr>
       <tr>
+        <th scope="row">Crow Out</th>
+        <td>Defines which output pair (1/2 or 3/4) to use.</td>
+      </tr>
+      <tr>
+        <th scope="row">Destiation</th>
+        <td>Where to send MIDI signals.</td>
+      </tr>
+      <tr>
         <th scope="row">Index</th>
         <td>Pointer a cell uses to keep track of its own state.</td>
       </tr>
@@ -211,7 +219,7 @@
       </tr>
       <tr>
         <th scope="row">Velocity</th>
-        <td>Midi velocity from 0-127.</td>
+        <td>MIDI velocity from 0-127.</td>
       </tr>
     </table>
   </div>
@@ -263,11 +271,11 @@
         <pre class="bg-dark">{% include pre_crypts.html %}</pre>
       </div>
     </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col mb-5">
-    <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Note <code>audio/crypts/</code> is a <strong>sibling</strong> of <code>audio/arcologies/</code>. Not a descendant.</em></div>
+    <div class="row">
+      <div class="col mb-5">
+        <div class="alert alert-secondary text-center"><i class="fas fa-info-circle"></i> <em>Note <code>audio/crypts/</code> is a <strong>sibling</strong> of <code>audio/arcologies/</code>. Not a descendant.</em></div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -288,12 +296,19 @@
     <h3>&mdash; Arpeggio</h3>
     <ol>
       <li>Using only one hive and six shrines, create an arpeggio.</li>
-      <li>Add six more shrines to create a second arpeggio.</li>
+      <li>Add six more shrines to create a second arpeggio. (Hint: use the copy and paste grid interaction.)</li>
     </ol>
 
     <h3>&mdash; Interference</h3>
     <ol>
       <li>Signals cancel each other out. Use this to your advantage and create a melody that gets mutilated by a rave, dome, or maze. Perhaps hives to the west, shrines to the east, and chaos between?</li>
+    </ol>
+
+    <h3>&mdash; Tunneling</h3>
+    <ol>
+      <li>Continuing from where the "Interference" challenge left off - send a steady stream of signals from one side of the grid to the other with tunnels.</li>
+      <li>Add a second tunnel network.</li>
+      <li>Add more tunnels to each network.</li>
     </ol>
 
     <h3>&mdash; Packt</h3>
@@ -319,11 +334,18 @@
       <li>Install <strong><a href="https://github.com/tyleretters/crypts">crypts</a></strong> & relaunch <strong>arcologies</strong>.</li>
       <li>Play samples with a crypt cell.</li>
       <li>While playing, navigate to the main norns edit menu and change the "CRYPT(S)" parameter.</li>
+      <li><a href="https://github.com/tyleretters/crypts">Share your samples!</a></li>
     </ol>
 
     <h3>&mdash; Syncopation</h3>
     <ol>
       <li>Using two vales with low ranges and two hives with high metabolisms, create a syncopated bassline.</li>
+    </ol>
+
+    <h3>&mdash; Casino Nights</h3>
+    <ol>
+      <li>Setup two casinos (or uxbs) but with different destinations.</li>
+      <li>Make a recording using only the audio output from the destination MIDI devices.</li>
     </ol>
 
   </div>
