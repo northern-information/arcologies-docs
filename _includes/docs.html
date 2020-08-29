@@ -72,13 +72,14 @@
         <h3>&mdash; norns (advanced)</h3>
         <p>Long press k3 to trigger a countdown and delete all cells.</p>
         <p>When changing values with e3, some items will use a pop-up menu. Unless otherwise specified on the screen, a 0.5 second threshold of inactivity (i.e. less than half a second after you stop turning e3) will result in returning to the previous menu. Note that the value selection is instantaneous - not 0.5 seconds - and some pop-up menus have an ABORT option available at the "bottom" of the values (i.e. spin e3 counter-clockwise until you see ABORT).</p>
+        <p>Move any encoder to skip the Northern Information splash screen or dismiss an full screen notification (such as grid disconnect messages).</p>
       </div>
       <div class="col-md-6 col-sm-12">
         <h3>&mdash; grid (advanced)</h3>
         <p>Long press a cell to copy to your clipboard. Short press any empty key to paste. Release to clear your clipboard.</p>
       </div>
     </div>
-    <div class="col mb-5">
+    <div class="col-md-6 offset-md-3 col-sm-12">
       <img src="{{ site.url}}/assets/images/norns.jpg">
     </div>
   </div>
@@ -90,13 +91,32 @@
   <div class="col mb-5">
     <h2 id="cells">Cells</h2>
     <hr>
-    <p>Cells are the building blocks of <strong>arcologies</strong>. Each key of grid represents a cell. Each cell has a structure, but these structures can be changed. Structures define qualities, behaviors, and attributes of a cell. Cells do one of three things:</p>
-    <ol>
-      <li>Manipulate signals.</li>
-      <li>Play sounds on norns.</li>
-      <li>Communicate with outboard gear.</li>
-    </ol>
-    <p>Cells also have four ports, each of which can either be open or closed. Ports direct the flow of signals.</p>
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+        <p>Cells are the building blocks of <strong>arcologies</strong>. Each key of grid represents a cell. Each cell has a structure, but these structures can be changed. Structures define qualities, behaviors, and attributes of a cell. Cells do one of three things:</p>
+        <ol>
+          <li>Manipulate signals.</li>
+          <li>Play sounds on norns.</li>
+          <li>Communicate with outboard gear.</li>
+        </ol>
+        <p>Cells also have four ports, each of which can either be open or closed. Ports direct the flow of signals.</p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="card text-white bg-dark mb-5">
+          <div class="card-header"><h5 class="card-title">Cell</h5></div>
+          <div class="card-body">
+            <img src="{{ site.url }}/assets/images/structures/cell.png" class="mx-auto d-block">
+            <p class="card-text text-center"><em>"[...] civilisations fall, sooner or later [...] and those forces which were always there, deeper than the foundations of the city walls: the desire to survive and the desire for meaning." &mdash; <a href="https://dark-mountain.net/about/manifesto/">The Dark Mountain Manifesto</a></em></p>
+            <hr>
+            <p class="card-text">Each unlit key on the grid holds potential to become any structure.</p>
+            <h3>&mdash; Attributes</h3>
+            <ul class="attributes">
+              <li>None</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -142,6 +162,7 @@
         <p class="card-text text-center"><em>"{{ structure.flavor }}"</em></p>
         <hr>
         <p class="card-text">{{ structure.content }}</p>
+        <h3>&mdash; Attributes</h3>
         <ul class="attributes">
           {% for attribute in structure.attributes %}
           <li>{{ attribute }}</li>
@@ -244,7 +265,7 @@
         </ul>
       </div>
       <div class="col-md-6 col-sm-12">
-        <img src="{{ site.url}}/assets/images/save.png">
+        <img src="{{ site.url}}/assets/images/screenshot-save.png">
       </div>
     </div>
   </div>
