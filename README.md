@@ -1,4 +1,4 @@
-# a r c o l o g i e s
+# arcologies
 
 If you are an artist, musician, or arcologist here to use this instrument, [everything you need to know is in the docs](https://tyleretters.github.io/arcologies-docs).
 
