@@ -284,8 +284,8 @@
     <p>This means cells can be right next to each other and talk freely between their ports. When you select a cell, that cells ports will be drawn over any adjacent cells, but the adjacent cells continue to exist.</p>
 
     <h3>&mdash; Cellular Memory</h3>
-    <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a hive with a metabolism configured, then switch it to a shrine, then back to a hive the same metabolism will remain. The gate (which doesn't have metabolism) won't erase them.
-    <p>One key exception to this is notes. Topiaries "re-roll" their notes every mutation. Fickle things, topiaries.</p>
+    <p>In general, cells will remember their attributes as they mutate between structures. This means you can have a hive with a metabolism configured, then switch it to a shrine, then back to a hive the same metabolism will remain. The shrine (which doesn't have metabolism) won't erase them.
+    <p>One key exception to this is any structure with notes. Topiaries "re-roll" their notes every mutation. Fickle things, topiaries.</p>
 
     <h3>&mdash; Leylines</h3>
     <p>Leylines help you visualize the signal flow of your arcology. Opening a port will draw a leyline to a terminus (either a neighboring cell or the edge of the grid.) Leylines are purely decorative and have no functional impact on your arcology.</p>
@@ -301,7 +301,7 @@
     <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is arbitrarily capped to 32 cells (anything more than this felt super chaotic to me.) Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (even more unlikely.) I find the feature a really fun way to get inspired and start a session.</p>
 
     <h3>&mdash; Pun?</h3>
-    <p><strong>arcologies</strong> is not a pun on monome arc. However, I do plan to add optional arc features in the future.</p>
+    <p><strong>arcologies</strong> is not a pun on <a href="https://monome.org/docs/arc/">monome arc</a>. However, I do plan to add optional arc features in the future.</p>
 
     <h3>&mdash; Crypt Management</h3>
     <p>By default, crypt cells source files matching the pattern <code>{1,2,3,4,5,6}.wav</code> from <code>/home/we/dust/audio/arcologies/crypt/*</code>. Note this directory is a descendant of <code>audio/arcologies/</code>. Just drop your files in this directory and you'll be ready to play samples.</p>
@@ -334,6 +334,9 @@
 
     <h3>&mdash; MIDI Isn't Working?</h3>
     <p>Be sure to set up your devices in the main norns menu first.</p>
+
+    <h3>&mdash; Nerdy ERD/code/architecture Shit</h3>
+    <p>All cells have one-and-only-one structure. <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L42-L58">There are 15 structures</a>. Cells have many attributes. There are, like, either <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L67-L81">13</a> or <a href="https://github.com/tyleretters/arcologies/blob/main/lib/Cell.lua#L58-L81">23</a> attributes depending how you count. All cells have <a href="https://github.com/tyleretters/arcologies/tree/main/lib/traits">all the traits</a> but their structure defines their behavior as composed in <a href="https://github.com/tyleretters/arcologies/tree/main/lib/config.lua">config.lua</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/Signal.lua">Signals are dumb</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/includes.lua">This file is important</a>.</p>
 
   </div>
 </div>
@@ -393,7 +396,7 @@
       <li>Install <strong><a href="https://github.com/tyleretters/crypts">crypts</a></strong> & relaunch <strong>arcologies</strong>.</li>
       <li>Play samples with a crypt cell.</li>
       <li>While playing, navigate to the main norns edit menu and change the "CRYPT(S)" parameter.</li>
-      <li><a href="https://github.com/tyleretters/crypts">Share your samples!</a></li>
+      <li><a href="https://github.com/tyleretters/crypts/blob/main/.github/pull_request_template.md">Share your samples!</a></li>
     </ol>
 
     <h3>&mdash; Syncopation</h3>
