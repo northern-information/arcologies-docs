@@ -5,3 +5,4 @@ url: https://tyleretters.github.io/arcologies-docs
 collections_dir: collections
 collections:
   - structures
+  - changelog

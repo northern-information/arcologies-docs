@@ -431,12 +431,21 @@
   <div class="col mb-5">
     <h2 id="changelog">Changelog</h2>
     <hr>
-    <ul>
-      <li><code>v1.0.2</code> - New Feature: Creating a new structure now jumps to Designer page > Structure item.</li>
-      <li><code>v1.0.1</code> - Bugfix: Add option to dismiss grid disconnect warning.</li>
-      <li><code>v1.0.0</code> - Initial release.</li>
-    </ul>
   </div>
+</div>
+
+
+
+<div class="row">
+  <table class="table">
+    {% assign changelog_by_order = site.changelog | reverse %}
+    {% for log in changelog_by_order %}
+    <tr>
+      <th scope="row"  id="{{ log.version }}">{{ log.version }}</th>
+      <td>{{ log.content }}</td>
+    </tr>
+    {% endfor %}
+  </table>
 </div>
 
 
