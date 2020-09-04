@@ -294,7 +294,7 @@
     <p>All signal collisions are animated with a simple "blink" of the key. This means that signal-on-signal cancellations, signals-on-closed-port, and signal-on-open-port all look the same.</p>
     
     <h3>&mdash; Time Signature & Polyrhythms</h3>
-    <p>The concept of time signatures and polyrhythms absolutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact ons-creen. With a global length of 16 and a hive with a metabolism of 7, for example, you'll be able to create a "<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2" type of rhythm.</p>
+    <p>The concept of time signatures and polyrhythms absolutely exist in <strong>arcologies</strong> - they just aren't labeled with traditional music terms. First, change "length" (on the home page) to set how many beats are in a bar. Then, select a hive (or any signal emitter: dome, maze, etc.) and set the metabolism. You'll graphically see how these two attributes interact ons-creen. With a global length of 16 and a hive with a metabolism of <code>10</code>, for example, you'll be able to create a "<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2-3-4-5-6-7-<strong>1</strong>-2" type of rhythm.</p>
     <p>Finally, change the hive's offset. Note that since signals all move at the same speed concepts like irregular rests or triplets don't exist. Perhaps one day there will be a triplet structure that fires off bursts...</p>
 
     <h3>&mdash; Seeding</h3>
@@ -338,6 +338,17 @@
     <h3>&mdash; Nerdy ERD/code/architecture Shit</h3>
     <p>All cells have one-and-only-one structure. <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L42-L58">There are 15 structures</a>. Cells have many attributes. There are, like, either <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L67-L81">13</a> or <a href="https://github.com/tyleretters/arcologies/blob/main/lib/Cell.lua#L58-L81">23</a> attributes depending how you count. All cells have <a href="https://github.com/tyleretters/arcologies/tree/main/lib/traits">all the traits</a> but their structure defines their behavior as composed in <a href="https://github.com/tyleretters/arcologies/tree/main/lib/config.lua">config.lua</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/Signal.lua">Signals are dumb</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/includes.lua">This file is important</a>.</p>
 
+    <h3 id="metabolism-table">&mdash; Metabolism Table</h3>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <p>Hopefully this table makes clear the hidden story of how the metabolism on hives and raves work.</p>
+        <p>Metabolism of <code>0</code> is mute. Metabolism of <code>16</code> is straight "16th notes".</p>
+        <p>But <code>13</code> is your four-to-the-floor!</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <pre class="bg-dark">{% include pre_hive_metabolism.html %}</pre>
+      </div>
+    </div>
   </div>
 </div>
 
