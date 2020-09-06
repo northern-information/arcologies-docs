@@ -138,4 +138,10 @@ iframe {
     color: #007BFF;
     background-color: #FFFFFF; }
 
+.gallery {
+  color: #444444;
+  background-color: #000000; }
+  .gallery hr {
+    border-color: #444444; }
+
 /*# sourceMappingURL=style.css.map */

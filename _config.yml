@@ -6,3 +6,5 @@ collections_dir: collections
 collections:
   - structures
   - changelog
+  - gallery
+include: ['_pages']
