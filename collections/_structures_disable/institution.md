@@ -1,9 +1,9 @@
 ---
-order:
+order: 17
 idf: institution
 name: Institution
 image: institution.png
 flavor: ...
-attributes: ['Crumble']
+attributes: ['Crumble', 'Deflect']
 ---
-Signals against closed ports are deflected. Signals against open ports cause it to crumble. When crumble reaches zereo, the structure explodes in a burst of signals in all directions.
+Signals against open ports cause it to crumble. When crumble reaches zereo, the structure explodes in a burst of signals in all directions. Signals against closed ports are deflected.
