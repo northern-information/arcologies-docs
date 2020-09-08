@@ -195,8 +195,20 @@
         <td>Defines which output pair (1/2 or 3/4) to use.</td>
       </tr>
       <tr>
+        <th scope="row">Crumble</th>
+        <td>How deteriorated a structure is. When it reaches zero, the structure is destroyed.</td>
+      </tr>
+      <tr>
+        <th scope="row">Deflect</th>
+        <td>Direction a cell will deflect a signal. Matching signal headings and deflections result in the signal being sent "counter clockwise" away (i.e. an west-bound signal and an west-deflecting cell will result in a north-bound signal.)</td>
+      </tr>
+      <tr>
         <th scope="row">Device</th>
         <td>Where to send MIDI signals. Remember to setup in the norns menu first.</td>
+      </tr>
+      <tr>
+        <th scope="row">Drift</th>
+        <td>Directions avaiable for a cell to move.</td>
       </tr>
       <tr>
         <th scope="row">Duration</th>
@@ -227,6 +239,10 @@
         <td>The distance a cell is shifted relative to the global length. Patterns wrap.</td>
       </tr>
       <tr>
+        <th scope="row">Operator</th>
+        <td><code>ADD</code>, <code>SUBTRACT</code>, <code>MULTIPLY</code>, <code>DIVIDE</code>, <code>MODULO</code>, and <code>SET</code>.</td>
+      </tr>
+      <tr>
         <th scope="row">Probability</th>
         <td>Odds of a cell doing something.</td>
       </tr>
@@ -241,6 +257,10 @@
       <tr>
         <th scope="row">Structure</th>
         <td>Defines all attributes and behaviors of a cell.</td>
+      </tr>
+      <tr>
+        <th scope="row">Territory</th>
+        <td>A region of the grid relative to a cell. Inclusive of leylines.</td>
       </tr>
       <tr>
         <th scope="row">Velocity</th>
@@ -327,6 +347,21 @@
       </div>
     </div>
 
+    <h3>&mdash; Hydroponics</h3>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <p>Operations work thusly: <code>(target metabolism) (hydroponics operator) (hydroponics metabolism) = (new target metabolism)</code>. So, a hydroponics with a metabolism of <code>1</code> and an operator of <code>add</code> operating on a target with a metabolism of <code>5</code> would look like this: <code>5 + 1 = 6</code>. If an operation would result in a divide-by-zero, then zero is returned.</p>
+        <p>Hydroponics operate on every cell with a metabolism in their territory.</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="{{ site.url}}/assets/images/south-east-territory.png">
+        <p class="text-center"><em>The south-east territory.</em></p>
+      </div>
+    </div>
+
+    <h3>&mdash; Institutions</h3>
+    <p>If a signal would be "cornered" by two or more institutions with contradictory deflections the signal will destroyed. Be kind to your signals.</p>
+
     <h3>&mdash; Debug</h3>
     <p>There are some debug features built in. Type these into the REPL: <code>arcdebug()</code>, <code>screenshot()</code>, & <code>wtfscale()</code>.</p>
 
@@ -334,12 +369,12 @@
     <p>Rename the directory "arcologies-main" to "arcologies" and place it in <code>/dust/code/</code>.</p>
 
     <h3>&mdash; Crow Isn't Working?</h3>
-    <p>Crow needs to be connected when you boot up <strong>arcologies</strong>.</p>
+    <p>Crow needs to be connected when you boot up <strong>arcologies</strong>. Unplug and replug the USB, too</p>
 
     <h3>&mdash; MIDI Isn't Working?</h3>
     <p>Be sure to set up your devices in the main norns menu first.</p>
 
-    <h3>&mdash; Nerdy ERD/code/architecture Shit</h3>
+    <h3>&mdash; Nerdy ERD/Code/Architecture Stuff</h3>
     <p>All cells have one-and-only-one structure. <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L42-L58">There are 15 structures</a>. Cells have many attributes. There are, like, either <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L67-L81">13</a> or <a href="https://github.com/tyleretters/arcologies/blob/main/lib/Cell.lua#L58-L81">23</a> attributes depending how you count. All cells have <a href="https://github.com/tyleretters/arcologies/tree/main/lib/traits">all the traits</a> but their structure defines their behavior as composed in <a href="https://github.com/tyleretters/arcologies/tree/main/lib/config.lua">config.lua</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/Signal.lua">Signals are dumb</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/includes.lua">This file is important</a>.</p>
 
     <h3 id="metabolism-table">&mdash; Metabolism Table</h3>
@@ -434,7 +469,8 @@
   <div class="col mb-5">
     <h2 id="ecosystem">Ecosystem</h2>
     <hr>
-    <h3>&mdash; crypts</h3>
+    <a href="https://github.com/tyleretters/crypts"><img src="{{ site.url}}/assets/images/eternal-september.jpg"></a>
+    <p><strong>eternal september</strong> is the name of <strong>arcologies</strong> <code>v1.1.0</code>. This marks the introduction of hydroponics, institutions, mirages, banks, and autons.</p>
     <a href="https://github.com/tyleretters/crypts"><img src="{{ site.url}}/assets/images/crypts-landscape.jpg"></a>
     <p><a href="https://github.com/tyleretters/crypts"><strong>crypts</strong></a> is a community sample pack / DLC for <strong>arcologies</strong>.</p>
   </div>
