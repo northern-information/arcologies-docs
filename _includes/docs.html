@@ -363,7 +363,7 @@
     <p>If a signal would be "cornered" by two or more institutions with contradictory deflections the signal will destroyed. Be kind to your signals.</p>
 
     <h3>&mdash; Debug</h3>
-    <p>There are some debug features built in. Type these into the REPL: <code>arcdebug()</code>, <code>screenshot()</code>, & <code>wtfscale()</code>.</p>
+    <p>There are some debug features built in. Type these into the REPL: <code>fn.arcdebug()</code>, <code>fn.screenshot()</code>, and <code>fn.wtfscale()</code>.</p>
 
     <h3>&mdash; The Direct Download Isn't Working?</h3>
     <p>Rename the directory "arcologies-main" to "arcologies" and place it in <code>/dust/code/</code>.</p>
@@ -372,7 +372,7 @@
     <p>Crow needs to be connected when you boot up <strong>arcologies</strong>. Unplug and replug the USB, too</p>
 
     <h3>&mdash; MIDI Isn't Working?</h3>
-    <p>Be sure to set up your devices in the main norns menu first.</p>
+    <p>Be sure to set up your devices in the main norns menu first. <strong>arcologies</strong> uses the 2020 <a href="https://monome.org/docs/norns/clocks/">norns clock</a>. This gives you access to internal, MIDI, Ableton Link, and crow sources.</p>
 
     <h3>&mdash; Nerdy ERD/Code/Architecture Stuff</h3>
     <p>All cells have one-and-only-one structure. <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L42-L63">There are 20 structures.</a> <a href="https://github.com/tyleretters/arcologies/blob/main/lib/config.lua#L72-L99">Cells have many attributes.</a> All cells have <a href="https://github.com/tyleretters/arcologies/tree/main/lib/traits">all the traits</a> but their structure defines their behavior as composed in <a href="https://github.com/tyleretters/arcologies/tree/main/lib/config.lua">config.lua</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/Signal.lua">Signals are dumb</a>. <a href="https://github.com/tyleretters/arcologies/tree/main/lib/includes.lua">This file is important</a>.</p>
