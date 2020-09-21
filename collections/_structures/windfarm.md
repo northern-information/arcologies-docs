@@ -1,9 +1,9 @@
 ---
-order: 21
+order: 22
 idf: windfarm
 name: Windfarm
 image: windfarm.png
-flavor: ...
+flavor: For a whirlwind does not last a whole morning, nor does a sudden shower last a whole day.
 attributes: ['Metabolism', 'Bearing', 'Clockwise']
 ---
-Its bearing is coupled to its ports. Each beat it emits a signal before spinning clockwise or counter-clockwise to the next bearing.
+Emits signals like a hive but spins.

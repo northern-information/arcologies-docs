@@ -1,5 +1,5 @@
 ---
-order: 22
+order: 21
 idf: kudzu
 name: Kudzu
 image: kudzu.png
