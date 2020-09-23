@@ -1,5 +1,5 @@
 ---
 layout: gallery
-title: Gallery
+title: gallery
 permalink: /gallery
 ---
