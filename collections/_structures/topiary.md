@@ -4,6 +4,6 @@ idf: topiary
 name: Topiary
 image: topiary.png
 flavor: A dangerously innocuous structure, the topiaries are endlessly groomed by the nuns and monks.
-attributes: ['Index', 'Notes 1 &mdash; 8', 'Velocity']
+attributes: ['Index', 'Notes 1 &mdash; 8', 'Topography', 'Velocity']
 ---
-Like shrines but has eight notes and an index. Each time a note plays, the index is incremented. Routes the flow of signals through open ports.
+Like shrines but has eight notes. Each time a note plays, the next note is selected via topography. Routes the flow of signals through open ports.

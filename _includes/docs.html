@@ -252,7 +252,7 @@
       </tr>
       <tr>
         <th scope="row">Operator</th>
-        <td><code>ADD</code>, <code>SUBTRACT</code>, <code>MULTIPLY</code>, <code>DIVIDE</code>, <code>MODULO</code>, and <code>SET</code>.</td>
+        <td><code>ADD</code>, <code>SUBTRACT</code>, <code>MULTIPLY</code>, <code>DIVIDE</code>, <code>MODULO</code>, or <code>SET</code>.</td>
       </tr>
       <tr>
         <th scope="row">Probability</th>
@@ -277,6 +277,10 @@
       <tr>
         <th scope="row">Territory</th>
         <td>A region of the grid relative to a cell. Inclusive of leylines.</td>
+      </tr>
+      <tr>
+        <th scope="row">Topography</th>
+        <td><code>&gt;&gt;&gt;&gt;</code>, <code>&lt;&lt;&lt;&lt;</code>, <code>&gt;&gt;&lt;&lt;</code>, or <code class="topography">DRUNK</code></td>
       </tr>
       <tr>
         <th scope="row">Velocity</th>
@@ -505,7 +509,7 @@
 
 <div class="row">
   <table class="table">
-    {% assign changelog_by_order = site.changelog | reverse %}
+    {% assign changelog_by_order = site.changelog | sort: "order" | reverse %}
     {% for log in changelog_by_order %}
     <tr>
       <th scope="row"  id="{{ log.version }}">{{ log.version }}</th>

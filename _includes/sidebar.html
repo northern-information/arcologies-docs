@@ -5,12 +5,6 @@
     <li class="nav-item"><a class="nav-link" href="#cells">Cells</a></li>
     <li class="nav-item"><a class="nav-link" href="#signals">Signals</a></li>
     <li class="nav-item"><a class="nav-link" href="#structures">Structures</a></li>
-    <nav class="nav nav-pills flex-column">
-      {% assign structures_by_order = site.structures | sort: "order" %}
-      {% for structure in structures_by_order %}
-      <li class="nav-item"><a class="nav-link sub-nav ml-3" href="#{{ structure.idf }}">{{ structure.name }}</a></li>
-      {% endfor %}
-    </nav>
     <li class="nav-item"><a class="nav-link" href="#attributes">Attributes</a></li>
     <li class="nav-item"><a class="nav-link" href="#save">Save</a></li>
     <li class="nav-item"><a class="nav-link" href="#miscellanea">Miscellanea</a></li>
