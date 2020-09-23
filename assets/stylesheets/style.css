@@ -148,10 +148,88 @@ iframe {
     border-color: #444444; }
 
 /* mapper */
-.theme-light img.glyph {
-  filter: invert(100%); }
-.theme-light img.diamond {
+.theme-sunsoaked .mapper-output {
+  background-image: url("../images/mapper/sunsoaked.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh; }
+.theme-sunsoaked .hider {
+  background: none; }
+.theme-sunsoaked img.glyph {
+  filter: opacity(70%) invert(100%) opacity(70%); }
+.theme-sunsoaked img.diamond {
   filter: opacity(10%) invert(100%); }
+.theme-sunsoaked p span {
+  color: #444444; }
+.theme-sunsoaked .crosshair {
+  border: none; }
+
+.theme-cross .mapper-output {
+  background-image: url("../images/mapper/cross.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh; }
+.theme-cross .hider {
+  background: none; }
+.theme-cross img.glyph {
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) opacity(1); }
+.theme-cross img.diamond {
+  filter: sepia(100%) hue-rotate(50deg) saturate(400%); }
+.theme-cross p span {
+  color: #fffdcc; }
+.theme-cross .crosshair {
+  border: none; }
+
+.theme-lemon .mapper-output {
+  background-image: url("../images/mapper/lemon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh; }
+.theme-lemon .hider {
+  background: none; }
+.theme-lemon img.glyph {
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(80%) opacity(80%); }
+.theme-lemon img.diamond {
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(30%) opacity(60%); }
+.theme-lemon p span {
+  color: #444444; }
+.theme-lemon .crosshair {
+  border: none; }
+
+.theme-light .mapper-output,
+.theme-light .hider {
+  background: #ffffff; }
+  .theme-light .mapper-output img.glyph,
+  .theme-light .hider img.glyph {
+    filter: opacity(70%) invert(100%); }
+  .theme-light .mapper-output img.diamond,
+  .theme-light .hider img.diamond {
+    filter: opacity(10%) invert(100%); }
+  .theme-light .mapper-output p span,
+  .theme-light .hider p span {
+    color: #444444; }
+  .theme-light .mapper-output .crosshair,
+  .theme-light .hider .crosshair {
+    border: 1px solid #000000; }
+
+.theme-dark .mapper-output,
+.theme-dark .hider {
+  background: #000000; }
+  .theme-dark .mapper-output img.glyph,
+  .theme-dark .hider img.glyph {
+    filter: opacity(60%); }
+  .theme-dark .mapper-output img.diamond,
+  .theme-dark .hider img.diamond {
+    filter: opacity(30%); }
+  .theme-dark .mapper-output p span,
+  .theme-dark .hider p span {
+    color: #ccc; }
+  .theme-dark .mapper-output .crosshair,
+  .theme-dark .hider .crosshair {
+    border: 1px solid #ffffff; }
 
 .mapper-input {
   width: 100%;
@@ -165,68 +243,74 @@ iframe {
 .mapper-output * {
   box-sizing: content-box; }
 
-.mapper-output {
-  width: 870px; }
-  .mapper-output p.arcology-name {
-    margin: 0;
-    width: 100%;
-    text-align: center; }
-  .mapper-output img {
-    padding: 0;
-    margin: 0; }
-  .mapper-output .foreground {
-    position: absolute;
-    background: none; }
-  .mapper-output .cell {
-    display: block;
-    float: left;
-    border: none;
-    background: none; }
-  .mapper-output .e,
-  .mapper-output .w {
-    width: 24px;
-    display: inline-block; }
-  .mapper-output .wrap,
-  .mapper-output .push {
-    display: inline-block;
-    margin: 10px; }
-  .mapper-output .crosshair {
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    border: 1px solid #000; }
-  .mapper-output .hider {
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    background: #fff; }
-  .mapper-output .nw {
-    position: relative;
-    border-left-style: none;
-    border-top-style: none; }
-    .mapper-output .nw .hider {
-      bottom: -1px;
-      right: -1px; }
-  .mapper-output .ne {
-    position: relative;
-    border-right-style: none;
-    border-top-style: none; }
-    .mapper-output .ne .hider {
-      bottom: -1px;
-      left: -1px; }
-  .mapper-output .sw {
-    position: relative;
-    border-left-style: none;
-    border-bottom-style: none; }
-    .mapper-output .sw .hider {
-      top: -1px;
-      right: -1px; }
-  .mapper-output .se {
-    position: relative;
-    border-right-style: none;
-    border-bottom-style: none; }
-    .mapper-output .se .hider {
-      top: -1px;
-      left: -1px; }
+#theme-wrapper {
+  margin: 10px; }
+  #theme-wrapper .mapper-output {
+    padding: 10px;
+    width: 875px; }
+    #theme-wrapper .mapper-output p {
+      margin: 0 75px 40px 75px; }
+      #theme-wrapper .mapper-output p span {
+        display: inline-block;
+        width: 50%; }
+    #theme-wrapper .mapper-output .arcology-name {
+      text-align: left; }
+    #theme-wrapper .mapper-output .arcology-author {
+      text-align: right; }
+    #theme-wrapper .mapper-output img {
+      padding: 0;
+      margin: 0; }
+    #theme-wrapper .mapper-output .foreground {
+      position: absolute;
+      background: none; }
+    #theme-wrapper .mapper-output .cell {
+      display: block;
+      float: left;
+      border: none;
+      background: none; }
+    #theme-wrapper .mapper-output .e,
+    #theme-wrapper .mapper-output .w {
+      width: 24px;
+      display: inline-block; }
+    #theme-wrapper .mapper-output .wrap,
+    #theme-wrapper .mapper-output .push {
+      display: inline-block;
+      margin: 10px; }
+    #theme-wrapper .mapper-output .crosshair {
+      width: 20px;
+      height: 20px;
+      display: inline-block; }
+    #theme-wrapper .mapper-output .hider {
+      width: 5px;
+      height: 5px;
+      position: absolute; }
+    #theme-wrapper .mapper-output .nw {
+      position: relative;
+      border-left-style: none;
+      border-top-style: none; }
+      #theme-wrapper .mapper-output .nw .hider {
+        bottom: -1px;
+        right: -1px; }
+    #theme-wrapper .mapper-output .ne {
+      position: relative;
+      border-right-style: none;
+      border-top-style: none; }
+      #theme-wrapper .mapper-output .ne .hider {
+        bottom: -1px;
+        left: -1px; }
+    #theme-wrapper .mapper-output .sw {
+      position: relative;
+      border-left-style: none;
+      border-bottom-style: none; }
+      #theme-wrapper .mapper-output .sw .hider {
+        top: -1px;
+        right: -1px; }
+    #theme-wrapper .mapper-output .se {
+      position: relative;
+      border-right-style: none;
+      border-bottom-style: none; }
+      #theme-wrapper .mapper-output .se .hider {
+        top: -1px;
+        left: -1px; }
 
 /*# sourceMappingURL=style.css.map */

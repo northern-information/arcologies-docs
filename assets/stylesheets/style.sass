@@ -167,13 +167,114 @@ iframe
 
 /* mapper */
 
-.theme-light
+.theme-sunsoaked
+
+  .mapper-output
+    background-image: url("../images/mapper/sunsoaked.jpg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 80vh
+
+  .hider
+    background: none
 
   img.glyph
-    filter: invert(100%)
+    filter: opacity(70%) invert(100%) opacity(70%)
 
   img.diamond
     filter: opacity(10%) invert(100%)
+
+  p span
+    color: #444444
+
+  .crosshair
+    border: none
+
+.theme-cross
+
+  .mapper-output
+    background-image: url("../images/mapper/cross.jpg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 80vh
+
+  .hider
+    background: none
+
+  img.glyph
+    filter: sepia(400%) hue-rotate(330deg) saturate(400%) opacity(1)
+
+  img.diamond
+    filter: sepia(100%) hue-rotate(50deg) saturate(400%)
+
+  p span
+    color: #fffdcc
+
+  .crosshair
+    border: none
+
+.theme-lemon
+
+  .mapper-output
+    background-image: url("../images/mapper/lemon.jpg")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 80vh
+
+  .hider
+    background: none
+
+  img.glyph
+    filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(80%) opacity(80%)
+
+  img.diamond
+    filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(30%) opacity(60%)
+
+  p span
+    color: #444444
+
+  .crosshair
+    border: none
+
+
+.theme-light
+
+  .mapper-output,
+  .hider
+    background: #ffffff
+
+    img.glyph
+      filter: opacity(70%) invert(100%)
+
+    img.diamond
+      filter: opacity(10%) invert(100%)
+
+    p span
+      color: #444444
+
+    .crosshair
+      border: 1px solid #000000
+
+.theme-dark
+
+  .mapper-output,
+  .hider
+    background: #000000
+
+    img.glyph
+      filter: opacity(60%)
+
+    img.diamond
+      filter: opacity(30%)
+
+    p span
+      color: #ccc
+
+    .crosshair
+      border: 1px solid #ffffff
 
 .mapper-input
   @extend .monospace
@@ -188,82 +289,93 @@ iframe
 .mapper-output *
   box-sizing: content-box
 
-.mapper-output
-  width: 870px
+#theme-wrapper
 
-  p.arcology-name
-    margin: 0
-    width: 100%
-    text-align: center
+  margin: 10px
 
-  img
-    padding: 0
-    margin: 0
+  .mapper-output
+    padding: 10px
+    width: 875px
 
-  .foreground
-    position: absolute
-    background: none
+    p
+      margin: 0 75px 40px 75px
 
-  .cell
-    display: block
-    float: left
-    border: none
-    background: none
+      span
+        display: inline-block
+        width: 50%
+      
+    .arcology-name
+        text-align: left
 
-  .e,
-  .w
-    width: 24px
-    display: inline-block
+    .arcology-author
+        text-align: right
 
-  .wrap,
-  .push
-    display: inline-block
-    margin: 10px
+    img
+      padding: 0
+      margin: 0
 
-  .crosshair
-    width: 20px
-    height: 20px
-    display: inline-block
-    border: 1px solid #000
+    .foreground
+      position: absolute
+      background: none
 
-  .hider
-    width: 5px
-    height: 5px
-    position: absolute
-    background: #fff
-  
-  .nw
-    position: relative
-    border-left-style: none
-    border-top-style: none
+    .cell
+      display: block
+      float: left
+      border: none
+      background: none
+
+    .e,
+    .w
+      width: 24px
+      display: inline-block
+
+    .wrap,
+    .push
+      display: inline-block
+      margin: 10px
+
+    .crosshair
+      width: 20px
+      height: 20px
+      display: inline-block
+
+    .hider
+      width: 5px
+      height: 5px
+      position: absolute
     
-    .hider
-      bottom: -1px
-      right: -1px
+    .nw
+      position: relative
+      border-left-style: none
+      border-top-style: none
+      
+      .hider
+        bottom: -1px
+        right: -1px
 
-  .ne
-    position: relative
-    border-right-style: none
-    border-top-style: none
+    .ne
+      position: relative
+      border-right-style: none
+      border-top-style: none
 
-    .hider
-      bottom: -1px
-      left: -1px
+      .hider
+        bottom: -1px
+        left: -1px
 
-  .sw
-    position: relative
-    border-left-style: none
-    border-bottom-style: none
+    .sw
+      position: relative
+      border-left-style: none
+      border-bottom-style: none
 
-    .hider
-      top: -1px
-      right: -1px
+      .hider
+        top: -1px
+        right: -1px
 
-  .se
-    position: relative
-    border-right-style: none
-    border-bottom-style: none
+    .se
+      position: relative
+      border-right-style: none
+      border-bottom-style: none
 
-    .hider
-      top: -1px
-      left: -1px
+      .hider
+        top: -1px
+        left: -1px

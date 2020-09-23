@@ -10,6 +10,7 @@ function redraw() {
   $('.grid').css('width', gridWidthInPx);
   $('.push').css('width', $('.wrap').css('width'))
   $('.arcology-name').html(mapper.name);
+  $('.arcology-author').html(mapper.author);
   for(i=0; i<mapper.cells.length; i++){
     var cell = mapper.cells[i].split(' ');
     var c = '.x' + cell[0] + 'y' + cell[1];
@@ -47,6 +48,7 @@ function getInput() {
   mapper.width = Number(metadataStringSplit[0]);
   mapper.height = Number(metadataStringSplit[1]);
   mapper.name = metadataStringSplit[2];
+  mapper.author = metadataStringSplit[3];
   mapper.cellWidth = 40;
   mapper.cellHeight = 40;
   mapper.cellSpacing = 4;
