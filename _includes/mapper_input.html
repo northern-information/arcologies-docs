@@ -1,8 +1,68 @@
-<h2>Input</h2>
-<hr>
-<textarea class="mapper-input" autofocus></textarea>
-<h2>Default</h2>
-<hr>
-<pre class="default">
-{% include default.txt %}
-</pre>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-5">
+      <h2>Input</h2>
+      <hr>
+      <textarea class="mapper-input" autofocus></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-5">
+      <h2>Theme</h2>
+      <hr>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="theme" id="theme1" value="theme-sunsoaked">
+        <label class="form-check-label" for="theme1">
+          Sunsoaked Destinies
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="theme" id="theme2" value="theme-cross">
+        <label class="form-check-label" for="theme2">
+          Cross Processed
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="theme" id="theme3" value="theme-lemon">
+        <label class="form-check-label" for="theme3">
+          Lemon Meringue Coma
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="theme" id="theme4" value="theme-light" checked>
+        <label class="form-check-label" for="theme4">
+          Light Minimalist
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="theme" id="theme5" value="theme-dark">
+        <label class="form-check-label" for="theme5">
+          Dark Minimalist
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-5">
+      <h2>Instructions</h2>
+      <hr>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col mb-5">
+      <h2>Default</h2>
+      <hr>
+      <pre class="default">{% include default.txt %}</pre>
+    </div>
+  </div>
+ <div class="row">
+    <div class="col mb-5 py-5 text-center">
+      <a href="https://nor.the-rn.info"><img alt="Northern Information" src="./assets/images/northern-information.svg" width="100" height="50"/></a>
+    </div>
+  </div>
+</div>

@@ -1,47 +1,37 @@
 function redraw() {
   $('.grid').empty();
-  $('.cells-foreground').empty();
-  
   var mapper = getInput();
   var cells = buildCells(mapper);
   $('.grid').append(cells);
-  $('.cells-foreground').append(cells);
-
-
-  var totalCellWidth = mapper.cellWidth + (mapper.cellBorder * 2) + (mapper.cellSpacing * 2)
-  var gridWidthInPx = mapper.width * totalCellWidth
-  var adjustPadding = mapper.cellSpacing * 2
-
-  $('.grid').css('background-color', mapper.backgroundColor);
+  var totalCellWidth = mapper.cellWidth + (mapper.cellSpacing * 2);
+  var gridWidthInPx = mapper.width * totalCellWidth;
+  var adjustPadding = mapper.cellSpacing * 2;
   $('.grid').css('padding',adjustPadding);
-  $('.grid').css('border-color', mapper.borderColor);
-  $('.grid').css('border-width', mapper.gridBorder);
   $('.grid').css('width', gridWidthInPx);
-  $('.cells-foreground').css('padding',adjustPadding);
-  $('.cells-foreground').css('border-width', mapper.gridBorder);
-  $('.cells-foreground').css('width', gridWidthInPx);
-  $('.push').css('width', $('.wrap').css('width'));
-
-  $('.cells-foreground .cell').each(function() {
-    $(this).css('background-color', mapper.cellForegroundColor);
-  });
-
+  $('.push').css('width', $('.wrap').css('width'))
+  $('.arcology-name').html(mapper.name);
+  for(i=0; i<mapper.cells.length; i++){
+    var cell = mapper.cells[i].split(' ');
+    var c = '.x' + cell[0] + 'y' + cell[1];
+    $(c).addClass('structure-' + cell[2]);
+    $(c).html('<img src="/assets/images/structures-svg/arcologies-glyphs_' + cell[2] + '.svg" class="glyph" />');
+  }
 }
 
 function buildCells(mapper) {
   var out = '';
   var counter = 0;
-  for ( h = 0; h < mapper.height; h++) {
+  for ( h = 1; h < mapper.height + 1; h++) {
     var thisRow = 'mapper-row-' + h;
-    out += '<div id="' + thisRow + '" style=" height:' + (mapper.cellHeight + (mapper.cellSpacing * 2) + (mapper.cellBorder * 2)) + 'px;">';
-    for ( w = 0; w < mapper.width; w++) {
-      out += '<div class="cell val-' + mapper.cells[counter] + ' mapper-col-' + w + '" style="background-color:' + mapper.cellBackgroundColor + 
-      '; border-color:' + mapper.borderColor + 
-      '; border-width:' + mapper.cellBorder + 
-      'px; width:' + mapper.cellWidth + 
+    out += '<div id="' + thisRow + '" style=" height:' + (mapper.cellHeight + (mapper.cellSpacing * 2)) + 'px;">';
+    for ( w = 1; w < mapper.width + 1; w++) {
+      out += '<div class="cell x' + w + 'y' + h + ' mapper-col-' + w +
+      '" style="width:' + mapper.cellWidth + 
       'px; height:' + mapper.cellHeight + 
       'px; margin:' + mapper.cellSpacing + 
-      'px;">&nbsp;</div>';
+      'px;">' + 
+      '<img src="/assets/images/structures-svg/arcologies-glyphs_diamond.svg" class="diamond"/>' +
+      '</div>';
       counter++;
     }
     out += '</div>';
@@ -51,28 +41,29 @@ function buildCells(mapper) {
 
 function getInput() {
   mapper = {};
-  mapperInput = $('.mapper-input').val().split(/\s*[\s,]\s*/)
-  mapper.width = Number(mapperInput[0])
-  mapper.height = Number(mapperInput[1])
-  mapper.backgroundColor = mapperInput[2]
-  mapper.cellForegroundColor = mapperInput[3]
-  mapper.cellBackgroundColor = mapperInput[4]
-  mapper.borderColor = mapperInput[5]
-  mapper.cellWidth = Number(mapperInput[6])
-  mapper.cellHeight = Number(mapperInput[7])
-  mapper.cellSpacing = Number(mapperInput[8])
-  mapper.gridBorder = Number(mapperInput[9])
-  mapper.cellBorder = Number(mapperInput[10])
-  mapperInput.splice(0,11)
-  mapper.cells = mapperInput
-  return mapper
+  mapperInput = $('.mapper-input').val().split("\n");
+  metadata = mapperInput[0];
+  metadataStringSplit = metadata.split(" ");
+  mapper.width = Number(metadataStringSplit[0]);
+  mapper.height = Number(metadataStringSplit[1]);
+  mapper.name = metadataStringSplit[2];
+  mapper.cellWidth = 40;
+  mapper.cellHeight = 40;
+  mapper.cellSpacing = 4;
+  mapperInput.shift();
+  mapper.cells = mapperInput;
+  return mapper;
 }
 
 $('.mapper-input').bind('input propertychange', function () {
-  redraw()
+  redraw();
+});
+
+$('input[type=radio]').change(function () {
+  $('#theme-wrapper').removeClass().addClass(this.value);
 });
 
 $(function() {
   $('.mapper-input').val($('pre.default').html());
-  redraw()
+  redraw();
 });

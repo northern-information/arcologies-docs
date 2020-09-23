@@ -167,6 +167,14 @@ iframe
 
 /* mapper */
 
+.theme-light
+
+  img.glyph
+    filter: invert(100%)
+
+  img.diamond
+    filter: opacity(10%) invert(100%)
+
 .mapper-input
   @extend .monospace
   width: 100%
@@ -181,52 +189,26 @@ iframe
   box-sizing: content-box
 
 .mapper-output
-  .grid,
-  .cells-foreground
-    border-style: solid
-    border-radius: 8px
-    background: #000000
-  
-  .cells-foreground
+  width: 870px
+
+  p.arcology-name
+    margin: 0
+    width: 100%
+    text-align: center
+
+  img
+    padding: 0
+    margin: 0
+
+  .foreground
     position: absolute
     background: none
-    .val-0
-      opacity: 0
-    .val-1
-      opacity: 0.07
-    .val-2
-      opacity: 0.13
-    .val-3
-      opacity: 0.2
-    .val-4
-      opacity: 0.27
-    .val-5
-      opacity: 0.33
-    .val-6
-      opacity: 0.4
-    .val-7
-      opacity: 0.47
-    .val-8
-      opacity: 0.53
-    .val-9
-      opacity: 0.6
-    .val-a
-      opacity: 0.67
-    .val-b
-      opacity: 0.73
-    .val-c
-      opacity: 0.8
-    .val-d
-      opacity: 0.87
-    .val-e
-      opacity: 0.93
-    .val-f
-      opacity: 1
 
   .cell
-    display: inline-block
-    border-style: solid
-    border-radius: 2px
+    display: block
+    float: left
+    border: none
+    background: none
 
   .e,
   .w
