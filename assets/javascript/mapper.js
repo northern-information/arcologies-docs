@@ -15,7 +15,7 @@ function redraw() {
     var cell = mapper.cells[i].split(' ');
     var c = '.x' + cell[0] + 'y' + cell[1];
     $(c).addClass('structure-' + cell[2]);
-    $(c).html('<img src="/assets/images/structures-svg/arcologies-glyphs_' + cell[2] + '.svg" class="glyph" />');
+    $(c).html('<img src="https://tyleretters.github.io/arcologies-docs/assets/images/structures-svg/arcologies-glyphs_' + cell[2] + '.svg" class="glyph" />');
   }
 }
 
@@ -31,7 +31,7 @@ function buildCells(mapper) {
       'px; height:' + mapper.cellHeight + 
       'px; margin:' + mapper.cellSpacing + 
       'px;">' + 
-      '<img src="/assets/images/structures-svg/arcologies-glyphs_diamond.svg" class="diamond"/>' +
+      '<img src="https://tyleretters.github.io/arcologies-docs/assets/images/structures-svg/arcologies-glyphs_diamond.svg" class="diamond"/>' +
       '</div>';
       counter++;
     }
