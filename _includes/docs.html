@@ -165,7 +165,7 @@
         <img src="{{ site.url }}/assets/images/structures/{{ structure.image }}" class="mx-auto d-block">
         <p class="card-text text-center"><em>"{{ structure.flavor }}"</em></p>
         <hr>
-        <p class="card-text">{{ structure.content }}</p>
+        {{ structure.content }}
         <h3>&mdash; Attributes</h3>
         <ul class="attributes">
           {% for attribute in structure.attributes %}
@@ -353,7 +353,7 @@
     <p>Seeding is purely random process with some opinionated boundaries for the various parameters. Your existing arcology has no impact on the result of a seed. Seeding destroys the current arcology. Seeding is arbitrarily capped to 32 cells (anything more than this felt super chaotic to me.) Seeding is not intelligent - you may generate an inert arcology with just 20 gates (unlikely), or the most beautiful symphony of all time (even more unlikely.) I find the feature a really fun way to get inspired and start a session.</p>
 
     <h3>&mdash; Pun?</h3>
-    <p><strong>arcologies</strong> was not a pun on <a href="https://monome.org/docs/arc/">monome arc</a>. <span class="strikethrough">However, I do plan to add optional arc features in the future.<span></p>
+    <p><strong>arcologies</strong> was not a pun on <a href="https://monome.org/docs/arc/">monome arc</a>. <span class="strikethrough">However, I do plan to add optional arc features in the future.</span></p>
 
     <h3>&mdash; Crypt Management</h3>
     <p>By default, crypt cells source files matching the pattern <code>{1,2,3,4,5,6}.wav</code> from <code>/home/we/dust/audio/arcologies/crypt/*</code>. Note this directory is a descendant of <code>audio/arcologies/</code>. Just drop your files in this directory and you'll be ready to play samples.</p>
@@ -518,15 +518,18 @@
 
 
 <div class="row">
-  <table class="table">
-    {% assign changelog_by_order = site.changelog | sort: "order" | reverse %}
-    {% for log in changelog_by_order %}
-    <tr>
-      <th scope="row"  id="{{ log.version }}">{{ log.version }}</th>
-      <td>{{ log.content }}</td>
-    </tr>
-    {% endfor %}
-  </table>
+  <div class="col mb-5">
+    <div class="container-fluid">
+      {% assign changelog_by_order = site.changelog | sort: "order" | reverse %}
+      {% for log in changelog_by_order %}
+      <div class="row">
+        <div class="col-md-2 col-sm-12"  id="{{ log.version }}"><strong>{{ log.version }}</strong></div>
+        <div class="col-md-10 col-sm-12">{{ log.content }}</div>
+        <div class="col mb5"><hr class="light"></div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
 

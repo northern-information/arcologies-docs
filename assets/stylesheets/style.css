@@ -61,6 +61,9 @@ hr {
   margin-top: 0;
   border-top: 2px solid #444444; }
 
+hr.light {
+  border-top: 1px solid #c4c4c4; }
+
 .strikethrough {
   text-decoration: line-through; }
 
