@@ -150,6 +150,9 @@ iframe {
   .gallery hr {
     border-color: #444444; }
 
+.ni {
+  width: 100px; }
+
 /* mapper */
 .theme-sunsoaked .mapper-output {
   background-image: url("../images/mapper/sunsoaked.jpg");
