@@ -1,10 +1,10 @@
 # arcologies
 
-If you are an artist, musician, or arcologist here to use this instrument, [everything you need to know is in the docs](https://tyleretters.github.io/arcologies-docs).
+If you are an artist, musician, or arcologist here to use this instrument, [everything you need to know is in the docs](https://northern-information.github.io/arcologies-docs).
 
 ## Development
 
-If you are a developer looking to contribute to **arcologies**, please visit [github.com/tyleretters/arcologies](https://github.com/tyleretters/arcologies).
+If you are a developer looking to contribute to **arcologies**, please visit [github.com/northern-information/arcologies](https://github.com/northern-information/arcologies).
 
 ## Docs
 
