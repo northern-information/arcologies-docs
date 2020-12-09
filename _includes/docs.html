@@ -316,12 +316,12 @@
       <div class="col-md-6 col-sm-12">
         <p>Save and load via the norns parameter edit menu.</p>
         <p>Saving creates a <code>.arcology</code> and a <code>.pset</code> and places them in <code>/dust/data/arcologies</code>.</p>
-        <p>Saving does not store audio or crypt <code>.wav</code>s. You get to manage those on your own. However! If you contribute your samples to <a href="https://github.com/tyleretters/crypts">crypts</a> you'll be able to share that way.</p>
+        <p>Saving does not store audio or crypt <code>.wav</code>s. You get to manage those on your own. However! If you contribute your samples to <a href="https://github.com/northern-information/crypts">crypts</a> you'll be able to share that way.</p>
         <p>Here's a minimalist arcology to get you started:</p>
         <ul>
           <li><a href="https://gist.github.com/tyleretters/384db1a15e645440141a627fdead50d9">athens.arcology</a></li>
           <li><a href="https://gist.github.com/tyleretters/e59f94e3eae3648bf185e629963058b1">athens.pset</a></li>
-          <li><a href="https://github.com/tyleretters/crypts/tree/main/digi">"digi" crypt</a></li>
+          <li><a href="https://github.com/northern-information/crypts/tree/main/digi">"digi" crypt</a></li>
         </ul>
       </div>
       <div class="col-md-6 col-sm-12">
@@ -365,7 +365,7 @@
 
     <h3>&mdash; Crypt Management</h3>
     <p>By default, crypt cells source files matching the pattern <code>{1,2,3,4,5,6}.wav</code> from <code>/home/we/dust/audio/arcologies/crypt/*</code>. Note this directory is a descendant of <code>audio/arcologies/</code>. Just drop your files in this directory and you'll be ready to play samples.</p>
-    <p>If you wish to use DLC from <a href="https://github.com/tyleretters/crypts"><strong>crypts</strong></a> you can configure your the source directory via the norns parameters menu. An arcology can only use one crypt at a time.</p>
+    <p>If you wish to use DLC from <a href="https://github.com/northern-information/crypts"><strong>crypts</strong></a> you can configure your the source directory via the norns parameters menu. An arcology can only use one crypt at a time.</p>
     <p>To get started, either download or clone <strong>crypts</strong> to <code>/home/we/dust/audio</code> (i.e. <code>cd dust/audio && git clone git@github.com:/tyleretters/crypts crypts</code>). If you don't want to deal with that and just want to load your own samples, simply create the directories and drop the files in.</p>
     <div class="row">
       <div class="col-md-6 col-sm-12">
@@ -411,7 +411,7 @@
     <p>Be sure to set up your devices in the main norns menu first. <strong>arcologies</strong> uses the 2020 <a href="https://monome.org/docs/norns/clocks/">norns clock</a>. This gives you access to internal, MIDI, Ableton Link, and crow sources.</p>
 
     <h3>&mdash; Nerdy ERD/Code/Architecture Stuff</h3>
-    <p><a href="https://github.com/tyleretters/arcologies/tree/main/lib/strucutres.lua">All cells have one-and-only-one structure.</a> <a href="https://github.com/tyleretters/arcologies/tree/main/lib/mixins">Cells have many attributes.</a> <a href="https://github.com/tyleretters/arcologies/tree/main/lib/Signal.lua">Signals are dumb.</a> <a href="https://github.com/tyleretters/arcologies/tree/main/lib/includes.lua">This file is important.</a> <a href="https://github.com/tyleretters/arcologies/tree/main/lib/keeper.lua">So is the keeper.</a></p>
+    <p><a href="https://github.com/northern-information/arcologies/tree/main/lib/strucutres.lua">All cells have one-and-only-one structure.</a> <a href="https://github.com/northern-information/arcologies/tree/main/lib/mixins">Cells have many attributes.</a> <a href="https://github.com/northern-information/arcologies/tree/main/lib/Signal.lua">Signals are dumb.</a> <a href="https://github.com/northern-information/arcologies/tree/main/lib/includes.lua">This file is important.</a> <a href="https://github.com/northern-information/arcologies/tree/main/lib/keeper.lua">So is the keeper.</a></p>
 
     <h3 id="metabolism-table">&mdash; Metabolism Table</h3>
     <div class="row">
@@ -491,10 +491,10 @@
       <li>Now, rename one of them to <code>crypt</code> and play the samples with a crypt cell.</li>
       <li>While playing, swap the directory names: <code>mv crypt crypt_tmp && mv inactive_crypt crypt && mv crypt_tmp inactive_crypt</code>. What (doesn't) happen?</li>
       <li>What happens when you adjust the index on a crypt?</li>
-      <li>Install <strong><a href="https://github.com/tyleretters/crypts">crypts</a></strong> & relaunch <strong>arcologies</strong>.</li>
+      <li>Install <strong><a href="https://github.com/northern-information/crypts">crypts</a></strong> & relaunch <strong>arcologies</strong>.</li>
       <li>Play samples with a crypt cell.</li>
       <li>While playing, navigate to the main norns edit menu and change the "CRYPT(S)" parameter.</li>
-      <li><a href="https://github.com/tyleretters/crypts/blob/main/.github/pull_request_template.md">Share your samples!</a></li>
+      <li><a href="https://github.com/northern-information/crypts/blob/main/.github/pull_request_template.md">Share your samples!</a></li>
     </ol>
 
     <h3>&mdash; Syncopation</h3>
@@ -521,8 +521,8 @@
     <p><strong>arctangents & archangels</strong> is the name of <strong>arcogolies</strong> <code>v1.2.0</code>. This marks the introduction of monome arc support.</p>
     <img src="{{ site.url}}/assets/images/eternal-september.jpg">
     <p><strong>eternal september</strong> is the name of <strong>arcologies</strong> <code>v1.1.0</code>. This marks the introduction of hydroponics, institutions, mirages, <span class="strikethrough">banks</span>, autons, kudzu, and windfarms.</p>
-    <a href="https://github.com/tyleretters/crypts"><img src="{{ site.url}}/assets/images/crypts-landscape.jpg"></a>
-    <p><a href="https://github.com/tyleretters/crypts"><strong>crypts</strong></a> is a community sample pack / DLC for <strong>arcologies</strong>.</p>
+    <a href="https://github.com/northern-information/crypts"><img src="{{ site.url}}/assets/images/crypts-landscape.jpg"></a>
+    <p><a href="https://github.com/northern-information/crypts"><strong>crypts</strong></a> is a community sample pack / DLC for <strong>arcologies</strong>.</p>
   </div>
 </div>
 
@@ -561,8 +561,8 @@
     <p>For monome <a href="https://monome.org/docs/norns">norns</a> and <a href="https://monome.org/docs/grid">grid</a>, <strong>arcologies</strong> is a 21st century instrument for musical composition and discovery.</p>
     <p>The core design objective for this software is clarity. Each key and encoder on norns have a dedicated function. All the keys on the grid share the same behavior. The menus are built to be fast, intuitive, cohesive, and consistent. With a foundation that is (hopefully) quick to master, the arcologist's focus can shift to sculpting emergent and complex compositions.</p>
     <p>The design of <strong>arcologies</strong> heavily inspired by the two-dimensionality of <a href="https://100r.co/site/orca.html">Orca</a>, the polymorphism of <a href="https://ornament-and-cri.me/">ornament & crime</a>, the immediacy of <a href="https://monome.org/docs/meadowphysics/">meadowphysics</a>, and the uncompromising vision of <a href="https://l.llllllll.co/cheat-codes">cheat codes</a>. I've always been interested in <a href="https://en.wikipedia.org/wiki/Emergence">emergence</a> and wanted to push that line of inquiry further than I have before. Other curios played a part, too: <a href="http://www.bay12games.com/dwarves/">Dwarf Fortress</a>, the <a href="https://en.wikipedia.org/wiki/Tower_defense">tower defense</a> genre, <a href="https://en.wikipedia.org/wiki/SimCity">SimCity</a>, and the <a href="http://generativemusic.com/">Eno / Chilvers</a> suite of generative applications, carbon-based life, water, the anthropocene, supply chains, <a href="https://en.wikipedia.org/wiki/The_Mushroom_at_the_End_of_the_World">The Mushroom at the End of the World</a>, <a href="https://dark-mountain.net/">The Dark Mountain Project</a>, <a href="https://soundcloud.com/eco-futurism-corp">Eco Futurism Corp</a>, <a href="https://danielseankelly.wordpress.com/2019/04/24/in-the-days-of-the-seasteaders-or-how-the-extropian-detritivores-broke-capitalism/">"seasteading"</a>, the gedankenexperiment-prompt: "sound artist's work in a William Gibson novel?", <a href="https://journal.highlandsolutions.com/cellular-automata-in-javascript-c0336af3e1f3">Conway's Game of Life</a>, Garfield Park Conservatory, the Epcot Center, <a href="https://en.wikipedia.org/wiki/Buckminster_Fuller">Buckminster Fuller</a>, and the need to challenge myself and create something beautiful during this fucking pandemic. And, of course, actual <a href="https://en.wikipedia.org/wiki/Arcology">arcologies</a> and <a href="https://en.wikipedia.org/wiki/Metabolism_(architecture)">the architectural movement known as <em>metabolism</em></a>.</p>
-    <p><strong>arcologies</strong> is free, <a href="https://github.com/tyleretters/arcologies">open source</a>, and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
-    <p><strong>crypts</strong> is free, <a href="https://github.com/tyleretters/crypts">open source</a>, and &mdash; being a community sample pack that may wind up in recordings &mdash; is under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal Public Domain Dedication</a> license.
+    <p><strong>arcologies</strong> is free, <a href="https://github.com/northern-information/arcologies">open source</a>, and licensed under the <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU General Public License v3.0</a>.</p>
+    <p><strong>crypts</strong> is free, <a href="https://github.com/northern-information/crypts">open source</a>, and &mdash; being a community sample pack that may wind up in recordings &mdash; is under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0 Universal Public Domain Dedication</a> license.
     <p>Contributions welcome.</p>
   </div>
 </div>
