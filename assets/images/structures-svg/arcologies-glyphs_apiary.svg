@@ -13,13 +13,9 @@
       .cls-2 {
         fill: #fff;
       }
-
-      .cls-3 {
-        display: none;
-      }
     </style>
   </defs>
-  <g id="Background" class="cls-3">
+  <g id="Background">
     <rect class="cls-1" y="-216" width="34" height="34"/>
     <rect class="cls-1" x="108" width="34" height="34"/>
     <rect class="cls-1" x="54" y="-216" width="34" height="34"/>
