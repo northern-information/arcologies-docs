@@ -1,128 +1,150 @@
 .sans-serif, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
 
-.monospace, code,
-pre, .card-body ul.attributes li, .mapper-input {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.monospace, .mapper-input, .card-body ul.attributes li, code,
+pre {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.container-fluid {
+  max-width: 1440px;
+}
 
 body {
   position: relative;
   font-size: 1rem;
-  color: #444444; }
+  color: #444444;
+}
 
 code,
 pre {
   color: #444444;
   background: #E2E3E5;
   padding: 4px;
-  border-radius: 2px; }
+  border-radius: 2px;
+}
 
 pre {
-  padding: 8px; }
-  pre.bg-dark {
-    color: #FFFFFF; }
+  padding: 8px;
+}
+pre.bg-dark {
+  color: #FFFFFF;
+}
 
 h2 {
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 h2.add-spacing {
-  letter-spacing: 10px; }
+  letter-spacing: 10px;
+}
 
 h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  font-style: italic; }
+  font-style: italic;
+}
 
 h4 {
   font-size: 1rem;
-  font-weight: 600; }
+  font-weight: 600;
+}
 
 a,
 a:link,
 a:visited {
   color: #007BFF;
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a:active,
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a.btn,
 a.btn:link,
 a.btn:visited {
   color: #FFFFFF;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a.btn:active,
 a.btn:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 hr {
   margin-top: 0;
-  border-top: 2px solid #444444; }
+  border-top: 2px solid #444444;
+}
 
 hr.light {
-  border-top: 1px solid #c4c4c4; }
+  border-top: 1px solid #c4c4c4;
+}
 
 .strikethrough {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 .card-header {
   border-bottom: none;
-  background: none; }
-  .card-header h5 {
-    margin-bottom: 0; }
+  background: none;
+}
+.card-header h5 {
+  margin-bottom: 0;
+}
 
 .card-body hr {
-  border-top: 2px solid #848484; }
+  border-top: 2px solid #848484;
+}
 .card-body code {
   background: none;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+}
 .card-body ul.attributes {
   padding: 0;
-  list-style: none; }
-  .card-body ul.attributes li {
-    font-size: 1rem;
-    background: #FFFFFF;
-    color: #444444;
-    padding: 0 5px;
-    margin: 0 0 10px 0;
-    border-radius: 4px; }
+  list-style: none;
+}
+.card-body ul.attributes li {
+  font-size: 1rem;
+  background: #FFFFFF;
+  color: #444444;
+  padding: 0 5px;
+  margin: 0 0 10px 0;
+  border-radius: 4px;
+}
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .navbar {
-  background: #444444 !important; }
-  .navbar a,
-  .navbar a:link,
-  .navbar a:visited,
-  .navbar a:hover,
-  .navbar a:active {
-    text-decoration: none; }
+  background: #444444 !important;
+}
+.navbar a,
+.navbar a:link,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:active {
+  text-decoration: none;
+}
 
 iframe {
   margin: auto;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 .row-dark {
   padding: 20px 0;
-  background: #444444; }
-  .row-dark p {
-    color: #FFFFFF; }
+  background: #444444;
+}
+.row-dark p {
+  color: #FFFFFF;
+}
 
-.jumbotron {
-  background-image: url("../images/arcologies-landscape.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 80vh;
-  margin: 0 -15px 0 -15px; }
-
-@media (max-width: 576px) {
-  .jumbotron {
-    height: 50vh; } }
 #toc {
   position: -webkit-sticky;
   position: sticky;
@@ -130,28 +152,36 @@ iframe {
   height: calc(100vh - 48px);
   padding-top: 0.5rem;
   overflow-x: hidden;
-  overflow-y: auto; }
-  #toc .nav-link {
-    color: #007BFF;
-    padding: 0.25rem 0.5rem; }
-  #toc .nav-link.add-spacing {
-    letter-spacing: 4px;
-    text-decoration: none; }
-  #toc .nav-link.active {
-    color: #FFFFFF;
-    background-color: #007BFF; }
-  #toc .sub-nav.active {
-    color: #007BFF;
-    background-color: #FFFFFF; }
+  overflow-y: auto;
+}
+#toc .nav-link {
+  color: #007BFF;
+  padding: 0.25rem 0.5rem;
+}
+#toc .nav-link.add-spacing {
+  letter-spacing: 4px;
+  text-decoration: none;
+}
+#toc .nav-link.active {
+  color: #FFFFFF;
+  background-color: #007BFF;
+}
+#toc .sub-nav.active {
+  color: #007BFF;
+  background-color: #FFFFFF;
+}
 
 .gallery {
   color: #444444;
-  background-color: #000000; }
-  .gallery hr {
-    border-color: #444444; }
+  background-color: #000000;
+}
+.gallery hr {
+  border-color: #444444;
+}
 
 .ni {
-  width: 100px; }
+  width: 100px;
+}
 
 /* mapper */
 .theme-sunsoaked .mapper-output {
@@ -159,83 +189,111 @@ iframe {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh; }
+  height: 80vh;
+}
 .theme-sunsoaked .hider {
-  background: none; }
+  background: none;
+}
 .theme-sunsoaked img.glyph {
-  filter: opacity(70%) invert(100%) opacity(70%); }
+  filter: opacity(70%) invert(100%) opacity(70%);
+}
 .theme-sunsoaked img.diamond {
-  filter: opacity(10%) invert(100%); }
+  filter: opacity(10%) invert(100%);
+}
 .theme-sunsoaked p span {
-  color: #444444; }
+  color: #444444;
+}
 .theme-sunsoaked .crosshair {
-  border: none; }
+  border: none;
+}
 
 .theme-cross .mapper-output {
   background-image: url("../images/mapper/cross.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh; }
+  height: 80vh;
+}
 .theme-cross .hider {
-  background: none; }
+  background: none;
+}
 .theme-cross img.glyph {
-  filter: sepia(400%) hue-rotate(330deg) saturate(400%) opacity(1); }
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) opacity(1);
+}
 .theme-cross img.diamond {
-  filter: sepia(100%) hue-rotate(50deg) saturate(400%); }
+  filter: sepia(100%) hue-rotate(50deg) saturate(400%);
+}
 .theme-cross p span {
-  color: #fffdcc; }
+  color: #fffdcc;
+}
 .theme-cross .crosshair {
-  border: none; }
+  border: none;
+}
 
 .theme-lemon .mapper-output {
   background-image: url("../images/mapper/lemon.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh; }
+  height: 80vh;
+}
 .theme-lemon .hider {
-  background: none; }
+  background: none;
+}
 .theme-lemon img.glyph {
-  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(80%) opacity(80%); }
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(80%) opacity(80%);
+}
 .theme-lemon img.diamond {
-  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(30%) opacity(60%); }
+  filter: sepia(400%) hue-rotate(330deg) saturate(400%) invert(30%) opacity(60%);
+}
 .theme-lemon p span {
-  color: #444444; }
+  color: #444444;
+}
 .theme-lemon .crosshair {
-  border: none; }
+  border: none;
+}
 
 .theme-light .mapper-output,
 .theme-light .hider {
-  background: #ffffff; }
-  .theme-light .mapper-output img.glyph,
-  .theme-light .hider img.glyph {
-    filter: opacity(70%) invert(100%); }
-  .theme-light .mapper-output img.diamond,
-  .theme-light .hider img.diamond {
-    filter: opacity(10%) invert(100%); }
-  .theme-light .mapper-output p span,
-  .theme-light .hider p span {
-    color: #444444; }
-  .theme-light .mapper-output .crosshair,
-  .theme-light .hider .crosshair {
-    border: 1px solid #000000; }
+  background: #ffffff;
+}
+.theme-light .mapper-output img.glyph,
+.theme-light .hider img.glyph {
+  filter: opacity(70%) invert(100%);
+}
+.theme-light .mapper-output img.diamond,
+.theme-light .hider img.diamond {
+  filter: opacity(10%) invert(100%);
+}
+.theme-light .mapper-output p span,
+.theme-light .hider p span {
+  color: #444444;
+}
+.theme-light .mapper-output .crosshair,
+.theme-light .hider .crosshair {
+  border: 1px solid #000000;
+}
 
 .theme-dark .mapper-output,
 .theme-dark .hider {
-  background: #000000; }
-  .theme-dark .mapper-output img.glyph,
-  .theme-dark .hider img.glyph {
-    filter: opacity(60%); }
-  .theme-dark .mapper-output img.diamond,
-  .theme-dark .hider img.diamond {
-    filter: opacity(30%); }
-  .theme-dark .mapper-output p span,
-  .theme-dark .hider p span {
-    color: #ccc; }
-  .theme-dark .mapper-output .crosshair,
-  .theme-dark .hider .crosshair {
-    border: 1px solid #ffffff; }
+  background: #000000;
+}
+.theme-dark .mapper-output img.glyph,
+.theme-dark .hider img.glyph {
+  filter: opacity(60%);
+}
+.theme-dark .mapper-output img.diamond,
+.theme-dark .hider img.diamond {
+  filter: opacity(30%);
+}
+.theme-dark .mapper-output p span,
+.theme-dark .hider p span {
+  color: #ccc;
+}
+.theme-dark .mapper-output .crosshair,
+.theme-dark .hider .crosshair {
+  border: 1px solid #ffffff;
+}
 
 .mapper-input {
   width: 100%;
@@ -244,79 +302,102 @@ iframe {
   border-radius: 4px;
   background: #000000;
   color: #fcb400;
-  padding: 30px; }
+  padding: 30px;
+}
 
 .mapper-output * {
-  box-sizing: content-box; }
+  box-sizing: content-box;
+}
 
 #theme-wrapper {
-  margin: 10px; }
-  #theme-wrapper .mapper-output {
-    padding: 10px;
-    width: 875px; }
-    #theme-wrapper .mapper-output p {
-      margin: 0 75px 40px 75px; }
-      #theme-wrapper .mapper-output p span {
-        display: inline-block;
-        width: 50%; }
-    #theme-wrapper .mapper-output .arcology-name {
-      text-align: left; }
-    #theme-wrapper .mapper-output .arcology-author {
-      text-align: right; }
-    #theme-wrapper .mapper-output img {
-      padding: 0;
-      margin: 0; }
-    #theme-wrapper .mapper-output .foreground {
-      position: absolute;
-      background: none; }
-    #theme-wrapper .mapper-output .cell {
-      display: block;
-      float: left;
-      border: none;
-      background: none; }
-    #theme-wrapper .mapper-output .e,
-    #theme-wrapper .mapper-output .w {
-      width: 24px;
-      display: inline-block; }
-    #theme-wrapper .mapper-output .wrap,
-    #theme-wrapper .mapper-output .push {
-      display: inline-block;
-      margin: 10px; }
-    #theme-wrapper .mapper-output .crosshair {
-      width: 20px;
-      height: 20px;
-      display: inline-block; }
-    #theme-wrapper .mapper-output .hider {
-      width: 5px;
-      height: 5px;
-      position: absolute; }
-    #theme-wrapper .mapper-output .nw {
-      position: relative;
-      border-left-style: none;
-      border-top-style: none; }
-      #theme-wrapper .mapper-output .nw .hider {
-        bottom: -1px;
-        right: -1px; }
-    #theme-wrapper .mapper-output .ne {
-      position: relative;
-      border-right-style: none;
-      border-top-style: none; }
-      #theme-wrapper .mapper-output .ne .hider {
-        bottom: -1px;
-        left: -1px; }
-    #theme-wrapper .mapper-output .sw {
-      position: relative;
-      border-left-style: none;
-      border-bottom-style: none; }
-      #theme-wrapper .mapper-output .sw .hider {
-        top: -1px;
-        right: -1px; }
-    #theme-wrapper .mapper-output .se {
-      position: relative;
-      border-right-style: none;
-      border-bottom-style: none; }
-      #theme-wrapper .mapper-output .se .hider {
-        top: -1px;
-        left: -1px; }
+  margin: 10px;
+}
+#theme-wrapper .mapper-output {
+  padding: 10px;
+  width: 875px;
+}
+#theme-wrapper .mapper-output p {
+  margin: 0 75px 40px 75px;
+}
+#theme-wrapper .mapper-output p span {
+  display: inline-block;
+  width: 50%;
+}
+#theme-wrapper .mapper-output p .arcology-name {
+  text-align: left;
+}
+#theme-wrapper .mapper-output p .arcology-author {
+  text-align: right;
+}
+#theme-wrapper .mapper-output p img {
+  padding: 0;
+  margin: 0;
+}
+#theme-wrapper .mapper-output p .foreground {
+  position: absolute;
+  background: none;
+}
+#theme-wrapper .mapper-output p .cell {
+  display: block;
+  float: left;
+  border: none;
+  background: none;
+}
+#theme-wrapper .mapper-output p .e,
+#theme-wrapper .mapper-output p .w {
+  width: 24px;
+  display: inline-block;
+}
+#theme-wrapper .mapper-output p .wrap,
+#theme-wrapper .mapper-output p .push {
+  display: inline-block;
+  margin: 10px;
+}
+#theme-wrapper .mapper-output p .crosshair {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+#theme-wrapper .mapper-output p .hider {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+}
+#theme-wrapper .mapper-output p .nw {
+  position: relative;
+  border-left-style: none;
+  border-top-style: none;
+}
+#theme-wrapper .mapper-output p .nw .hider {
+  bottom: -1px;
+  right: -1px;
+}
+#theme-wrapper .mapper-output p .ne {
+  position: relative;
+  border-right-style: none;
+  border-top-style: none;
+}
+#theme-wrapper .mapper-output p .ne .hider {
+  bottom: -1px;
+  left: -1px;
+}
+#theme-wrapper .mapper-output p .sw {
+  position: relative;
+  border-left-style: none;
+  border-bottom-style: none;
+}
+#theme-wrapper .mapper-output p .sw .hider {
+  top: -1px;
+  right: -1px;
+}
+#theme-wrapper .mapper-output p .se {
+  position: relative;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+#theme-wrapper .mapper-output p .se .hider {
+  top: -1px;
+  left: -1px;
+}
 
 /*# sourceMappingURL=style.css.map */
